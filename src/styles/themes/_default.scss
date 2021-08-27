@@ -6,7 +6,14 @@ $background-light: adjust(#F1EADA, $lightness: 5%);
 $background: #F1EADA;
 $background-dark: adjust(#F1EADA, $lightness: -5%);
 
+$primary-light: adjust(#C64733, $lightness: 5%);
 $primary: #C64733;
+$primary-dark: adjust(#C64733, $lightness: -5%);
 
+$grey-light: adjust(#ABA8A7, $lightness: 5%);
 $grey: #ABA8A7;
-$dark: #17292E;
+$grey-dark: adjust(#ABA8A7, $lightness: -5%);
+
+$black-light: adjust(#17292E, $lightness: 5%); 
+$black: #17292E; 
+$black-light: adjust(#17292E, $lightness: -5%); 
