@@ -280,7 +280,7 @@ template {
 }
 
 .app {
-  background: linear-gradient(rgba(46, 48, 56, 0.4), rgba(46, 48, 56, 0.4)), url("/src/assets/images/matt-artz-nTRDnDdDYk8-unsplash.jpg");
+  background-color: #f7f6ed;
   background-size: cover;
   background-blend-mode: darken;
   background-position-y: center;
@@ -318,7 +318,7 @@ template {
 
 @-webkit-keyframes slide-in {
   0% {
-    transform: translate(75vw, -2.5rem) skew(15deg);
+    transform: translate(75vw, -2.5rem) skew(-10deg);
   }
   80% {
     transform: translate(0, 0) skewX(0deg);
@@ -333,7 +333,7 @@ template {
 
 @keyframes slide-in {
   0% {
-    transform: translate(75vw, -2.5rem) skew(15deg);
+    transform: translate(75vw, -2.5rem) skew(-10deg);
   }
   80% {
     transform: translate(0, 0) skewX(0deg);

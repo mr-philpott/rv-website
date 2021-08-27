@@ -1,8 +1,8 @@
 @use "../themes/default" as *;
 
 .app {
-    // background-color: $bg;
-    background: linear-gradient(rgba($txt-lgt, 0.4), rgba($txt-lgt, 0.4)), url("/src/assets/images/matt-artz-nTRDnDdDYk8-unsplash.jpg");
+    background-color: $bg;
+    // background: linear-gradient(rgba($txt-lgt, 0.4), rgba($txt-lgt, 0.4)), url("/src/assets/images/matt-artz-nTRDnDdDYk8-unsplash.jpg");
     background-size: cover;
     background-blend-mode: darken;
     background-position-y: center;
@@ -54,7 +54,7 @@
 
 @keyframes slide-in {
     0% {
-        transform: translate(75vw, -2.5rem) skew(15deg);
+        transform: translate(75vw, -2.5rem) skew(-10deg);
     } 80% {
         transform: translate(0, 0) skewX(0deg);
     } 90% {
