@@ -11,7 +11,6 @@
 
 html {
   box-sizing: border-box;
-  overflow-y: scroll;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
@@ -278,4 +277,51 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.app {
+  background-color: #f7f6ed;
+  display: grid;
+}
+.app .cover {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-color: #a01c27;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  margin-left: auto;
+  z-index: 1;
+  box-shadow: -5px 0px 10px #2e3038;
+}
+.app img {
+  margin: auto;
+  margin-left: 17.5vw;
+  margin-top: 5vh;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 50vw;
+  transform: translate(20rem, 0);
+  -webkit-animation: slide-in 1s ease 0.25s;
+          animation: slide-in 1s ease 0.25s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translate(20rem, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translate(20rem, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=style.css.map */

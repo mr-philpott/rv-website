@@ -1,0 +1,38 @@
+@use "../themes/default" as *;
+
+.app {
+    background-color: $bg;
+    display: grid;
+
+    .cover {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        background-color: $primary;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        margin-left: auto;
+        z-index: 1;
+        box-shadow: -5px 0px 10px $txt-lgt;
+    }
+
+    img {
+        margin: auto;
+        margin-left: 17.5vw;
+        margin-top: 5vh;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        width: 50vw;
+        transform: translate(20rem, 0);
+        animation: slide-in 1s ease .25s;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translate(20rem, 0);
+    } 100% {
+        transform: translate(0, 0);        
+    }
+}
