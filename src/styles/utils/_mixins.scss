@@ -125,10 +125,10 @@
 @mixin Flex-Center($direction: row, $hor: true, $ver: true) {
     display: flex;
     flex-direction: $direction;
-    @if $flex == row {
+    @if $direction == row {
         @if $hor {justify-content: center}
         @if $ver {align-items: center}
-    } @else if $flex == column {
+    } @else if $direction == column {
         @if $hor {align-items: center}
         @if $ver {justify-content: center}
     }
