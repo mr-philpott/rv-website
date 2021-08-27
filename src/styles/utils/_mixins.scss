@@ -1,0 +1,228 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+// Width Height
+@mixin Width-Height($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Pseudo Elements
+@mixin Pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Pointer for dropdown etc.
+// CSS Traingles / Pointers
+@mixin CSS-Pointer($color, $direction, $size: 6px, $position: absolute, $round: false){
+    @include Pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+// Font Customizer
+// Modifies fonts all in one line
+@mixin Font-Customize(
+    $font: sans-serif, 
+    $size: false, 
+    $color: false, 
+    $weight: false, 
+    $ls: false, 
+    $lh: false
+) {
+    font-family: $font;
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $ls {letter-spacing: $ls; }
+    @if $lh { line-height: $lh; }
+}
+
+// Input Placeholder
+// placeholder text
+@mixin Input-Placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// Selection
+// The color and background of selected text
+@mixin Selection($bg: false, $color: false) {
+    &::selection,
+    ::selection {
+        @if $bg {background-color: $bg; }
+        @if $color {color: $color; }
+    }
+
+    &::-moz-selection,
+    ::-moz-selection {
+        @if $bg {background-color: $bg; }
+        @if $color {color: $color; }
+    }
+}
+
+// Media
+// Media Queries made easy
+@mixin Media($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: calc(#{$width} - 1px);
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// Ellipsis
+// Makes an ellipsis if a line spans too long
+@mixin Ellipsis($width) {
+    max-width: $width;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+// Flex
+@mixin Flex($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+// Flex-Center
+// Centers it based on the direction of flow
+// the params hor and ver stand for horizontal and vertical
+@mixin Flex-Center($direction: row, $hor: true, $ver: true) {
+    display: flex;
+    flex-direction: $direction;
+    @if $flex == row {
+        @if $hor {justify-content: center}
+        @if $ver {align-items: center}
+    } @else if $flex == column {
+        @if $hor {align-items: center}
+        @if $ver {justify-content: center}
+    }
+}
+
+// Typograpghy files
+// If you have a font file use this
+// This id not required for imported fonts
+@mixin Font-Face(
+    $font-name, 
+    $file-name,
+    $weight: normal,
+    $style: normal,
+) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name + ".eot");
+        src: url($file-name + ".eot#iefix") format("embedded-opentype"),
+            url($file-name +  ".woff") format("woff"),
+            url($file-name +  ".ttf") format("truetype"),
+            url($file-name +  ".svg") format("svg");
+        font-weight: $weight;
+        font-style: $style;
+    }    
+}   
+
+// Z-Index
+// Sets the z-index using the Layer function
+@mixin Z-Index($layer, $pos: relative) {
+    position: $pos;
+    z-index: Layer($layer);
+}
+
+// Grid
+// Stacks elements on top one another
+@mixin Stack {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+// Cubiod 
+// For 3d css aniamtions
+@mixin Cuboid($width, $height, $depth, $bgc: transparent, $border: 0) {
+    @include Width-Height($width, $height);
+    position: relative;
+    transform-style: preserve-3d;
+
+    > * {
+        background-color: $bgc;
+        border: $border;
+        position: absolute;
+        
+        &:nth-of-type(1) {
+            width: $width;
+            height: $height;
+            transform: translate3d(0, 0, $depth * -0.5);
+        }
+
+        &:nth-of-type(2) {
+            width: $width;
+            height: $height;
+            transform: translate3d(0, 0, $depth * 0.5);
+        } 
+
+        &:nth-of-type(3) {
+            width: $depth;
+            height: $height;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateY(90deg) translate3d(0, 0, $width * -0.5);
+        }
+
+        &:nth-of-type(4) {
+            width: $depth;
+            height: $height;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateY(-90deg) translate3d(0, 0, $width * -0.5);
+        }
+
+        &:nth-of-type(5) {
+            width: $width;
+            height: $depth;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(-90deg) translate3d(0, 0, $height * -0.5);
+        }
+
+        &:nth-of-type(6) {
+            width: $width;
+            height: $depth;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(90deg) translate3d(0, 0, $height * -0.5);
+        }
+    }
+}

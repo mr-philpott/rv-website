@@ -1,0 +1,178 @@
+// --- Directions --- //
+// Simply change the inital variable and it will update every version of the variable
+
+// --- Orders --- //
+// These colors are meant to be changed in order to fit the website
+// The color section below show some of the posible colors you could make these
+// but are by no way a comprehensive list
+
+// Primary / Same as Red in Colors
+$primary-darker : hsl(355, 70%, 11%); $pri-drkr: $primary-darker ; 
+$primary-dark   : hsl(355, 70%, 21%); $pri-drk : $primary-dark   ; 
+$primary        : hsl(355, 70%, 37%); $pri     : $primary        ; 
+$primary-light  : hsl(355, 70%, 52%); $pri-lgt : $primary-light  ; 
+$primary-lighter: hsl(355, 70%, 63%); $pri-lgtr: $primary-lighter; 
+
+// Secondary / Same as Blue in Colors
+$secondary-darker : hsl(200, 70%, 11%); $sec-drkr: $secondary-darker ;
+$secondary-dark   : hsl(200, 70%, 21%); $sec-drk : $secondary-dark   ;
+$secondary        : hsl(200, 70%, 37%); $sec     : $secondary        ;
+$secondary-light  : hsl(200, 70%, 52%); $sec-lgt : $secondary-light  ;
+$secondary-lighter: hsl(200, 70%, 63%); $sec-lgtr: $secondary-lighter;
+
+// Tertiary / Same as Green in Colors
+$tertiary-darker : hsl(155, 70%, 11%); $ter-drkr: $tertiary-darker ; 
+$tertiary-dark   : hsl(155, 70%, 21%); $ter-drk : $tertiary-dark   ; 
+$tertiary        : hsl(155, 70%, 37%); $ter     : $tertiary        ; 
+$tertiary-light  : hsl(155, 70%, 52%); $ter-lgt : $tertiary-light  ; 
+$tertiary-lighter: hsl(155, 70%, 63%); $ter-lgtr: $tertiary-lighter; 
+
+// --- Page --- //
+// These are the colors to be used based on their page names
+// For exmaple background or text
+
+// Background
+$background-dark : hsl(50, 40%, 90%); $bg-drk: $background-dark ;
+$background      : hsl(50, 40%, 95%); $bg    : $background      ;
+$background-light: hsl(50, 40%,100%); $bg-lgt: $background-light;
+
+// Text
+$text-dark : hsl(225, 10%,  1%); $txt-drk: $text-dark ;
+$text      : hsl(225, 10%,  6%); $txt    : $text      ;
+$text-light: hsl(225, 10%, 20%); $txt-lgt: $text-light;
+
+// --- Classes --- //
+// These are not the css classes but rather a sort of class of types
+// like a error class or a success class, ya know?
+
+// Error / Same as Red in Colors
+$error-darker : hsl(355, 70%, 11%); $err-drkr: $error-darker ;
+$error-dark   : hsl(355, 70%, 21%); $err-drk : $error-dark   ;
+$error        : hsl(355, 70%, 37%); $err     : $error        ;
+$error-light  : hsl(355, 70%, 52%); $err-lgt : $error-light  ;
+$error-lighter: hsl(355, 70%, 63%); $err-lgtr: $error-lighter;
+
+// Warning / Same as Yellow in Colors
+$warning-darker : hsl(45, 70%, 11%); $wrn-drkr: $warning-darker ;
+$warning-dark   : hsl(45, 70%, 21%); $wrn-drk : $warning-dark   ;
+$warning        : hsl(45, 70%, 37%); $wrn     : $warning        ;
+$warning-light  : hsl(45, 70%, 52%); $wrn-lgt : $warning-light  ;
+$warning-lighter: hsl(45, 70%, 63%); $wrn-lgtr: $warning-lighter;
+
+// Sucess / Same as Green in Colors
+$sucess-darker : hsl(155, 70%, 11%); $scs-drkr: $sucess-darker ;
+$sucess-dark   : hsl(155, 70%, 21%); $scs-drk : $sucess-dark   ;
+$sucess        : hsl(155, 70%, 37%); $scs     : $sucess        ;
+$sucess-light  : hsl(155, 70%, 52%); $scs-lgt : $sucess-light  ;
+$sucess-lighter: hsl(155, 70%, 63%); $scs-lgtr: $sucess-lighter;
+ 
+// Info / Same as Blue in Colors
+$info-darker : hsl(200, 70%, 11%); $inf-drkr: $info-darker ;
+$info-dark   : hsl(200, 70%, 21%); $inf-drk : $info-dark   ;
+$info        : hsl(200, 70%, 37%); $inf     : $info        ;
+$info-light  : hsl(200, 70%, 52%); $inf-lgt : $info-light  ;
+$info-lighter: hsl(200, 70%, 63%); $inf-lgtr: $info-lighter;
+
+
+
+// --- Colors --- //
+// All of the colors of the rainbow and more!
+// But is not a comphesive list of all colors possible
+// Feel free to make your own and add or replace them here
+
+// Red
+$red-darker : hsl(355, 70%, 11%); $red-drkr: $red-darker ;
+$red-dark   : hsl(355, 70%, 21%); $red-drk : $red-dark   ;
+$red        : hsl(355, 70%, 37%); $red     : $red        ;
+$red-light  : hsl(355, 70%, 52%); $red-lgt : $red-light  ;
+$red-lighter: hsl(355, 70%, 63%); $red-lgtr: $red-lighter;
+
+// Orange
+$orange-darker : hsl(20, 70%, 11%); $orn-drkr: $orange-darker ;
+$orange-dark   : hsl(20, 70%, 21%); $orn-drk : $orange-dark   ;
+$orange        : hsl(20, 70%, 37%); $orn     : $orange        ;
+$orange-light  : hsl(20, 70%, 52%); $orn-lgt : $orange-light  ;
+$orange-lighter: hsl(20, 70%, 63%); $orn-lgtr: $orange-lighter;
+
+// Yellow
+$yellow-darker : hsl(45, 70%, 11%); $yel-drkr: $yellow-darker ;
+$yellow-dark   : hsl(45, 70%, 21%); $yel-drk : $yellow-dark   ;
+$yellow        : hsl(45, 70%, 37%); $yel     : $yellow        ;
+$yellow-light  : hsl(45, 70%, 52%); $yel-lgt : $yellow-light  ;
+$yellow-lighter: hsl(45, 70%, 63%); $yel-lgtr: $yellow-lighter;
+
+// Green
+$green-darker : hsl(155, 70%, 11%); $grn-drkr: $green-darker ;
+$green-dark   : hsl(155, 70%, 21%); $grn-drk : $green-dark   ;
+$green        : hsl(155, 70%, 37%); $grn     : $green        ;
+$green-light  : hsl(155, 70%, 52%); $grn-lgt : $green-light  ;
+$green-lighter: hsl(155, 70%, 63%); $grn-lgtr: $green-lighter;
+
+// Blue
+$blue-darker : hsl(200, 70%, 11%); $blu-drkr: $blue-darker ;
+$blue-dark   : hsl(200, 70%, 21%); $blu-drk : $blue-dark   ;
+$blue        : hsl(200, 70%, 37%); $blu     : $blue        ;
+$blue-light  : hsl(200, 70%, 52%); $blu-lgt : $blue-light  ;
+$blue-lighter: hsl(200, 70%, 63%); $blu-lgtr: $blue-lighter;
+
+// Purple
+$purple-darker : hsl(270, 70%, 11%); $pur-drkr: $purple-darker ;
+$purple-dark   : hsl(270, 70%, 21%); $pur-drk : $purple-dark   ;
+$purple        : hsl(270, 70%, 37%); $pur     : $purple        ;
+$purple-light  : hsl(270, 70%, 52%); $pur-lgt : $purple-light  ;
+$purple-lighter: hsl(270, 70%, 63%); $pur-lgtr: $purple-lighter;
+
+// Violet
+$violet-darker : hsl(285, 70%, 11%); $vio-drkr: $violet-darker ;
+$violet-dark   : hsl(285, 70%, 21%); $vio-drk : $violet-dark   ;
+$violet        : hsl(285, 70%, 37%); $vio     : $violet        ;
+$violet-light  : hsl(285, 70%, 52%); $vio-lgt : $violet-light  ;
+$violet-lighter: hsl(285, 70%, 63%); $vio-lgtr: $violet-lighter;
+
+// Others
+
+// Cyan
+$cyan-darker : hsl(180, 70%, 11%); $cyn-drkr: $cyan-darker ;
+$cyan-dark   : hsl(180, 70%, 21%); $cyn-drk : $cyan-dark   ;
+$cyan        : hsl(180, 70%, 37%); $cyn     : $cyan        ;
+$cyan-light  : hsl(180, 70%, 52%); $cyn-lgt : $cyan-light  ;
+$cyan-lighter: hsl(180, 70%, 63%); $cyn-lgtr: $cyan-lighter;
+
+// Mint
+$mint-darker : hsl(160, 70%, 11%); $mnt-drkr: $mint-darker ;
+$mint-dark   : hsl(160, 70%, 21%); $mnt-drk : $mint-dark   ;
+$mint        : hsl(160, 70%, 37%); $mnt     : $mint        ;
+$mint-light  : hsl(160, 70%, 52%); $mnt-lgt : $mint-light  ;
+$mint-lighter: hsl(160, 70%, 63%); $mnt-lgtr: $mint-lighter;
+
+// Pink
+$pink-darker : hsl(335, 70%, 11%); $pnk-drkr: $pink-darker ;
+$pink-dark   : hsl(335, 70%, 21%); $pnk-drk : $pink-dark   ;
+$pink        : hsl(335, 70%, 37%); $pnk     : $pink        ;
+$pink-light  : hsl(335, 70%, 52%); $pnk-lgt : $pink-light  ;
+$pink-lighter: hsl(335, 70%, 63%); $pnk-lgtr: $pink-lighter;
+
+// --- Monotone --- //
+// Useful for planning a page without color to see what pops and what doesnt
+
+$black  : hsl(0, 0%,   0%);
+$gray-0 : hsl(0, 0%,   5%);
+$gray-1 : hsl(0, 0%,  13%);
+$gray-2 : hsl(0, 0%,  21%);
+$gray-3 : hsl(0, 0%,  29%);
+$gray-4 : hsl(0, 0%,  37%);
+$gray-5 : hsl(0, 0%,  45%);
+$gray-6 : hsl(0, 0%,  52%);
+$gray-7 : hsl(0, 0%,  60%);
+$gray-8 : hsl(0, 0%,  67%);
+$gray-9 : hsl(0, 0%,  74%);
+$gray-10: hsl(0, 0%,  81%);
+$gray-11: hsl(0, 0%,  88%);
+$gray-12: hsl(0, 0%,  95%);
+$white  : hsl(0, 0%, 100%);
+
+// --- Misc --- //
+// Some of the colors I could find a spot for
+
+$off-white: hsl(0, 0%, 95%);
+$off-black: hsl(0, 0%, 10%);

@@ -1,0 +1,344 @@
+// --- Tools for custom animations --- //
+
+// Variables
+$maintainables: (); // This is a map not a list
+
+// Custom-Animation
+// I find this more readable than @keyframes
+// and the reset of maintainable is needed for multiple animations
+@mixin Custom-Animation($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+    $maintainables: () !global; // Resets maintainables for next keyframe
+}
+
+// Frame
+// Frame is the same as the percentage signs in normal keyframes
+// multiple percents can be added such that they both produce the same frame
+@mixin Frame($percents, $maintain: ()) {
+    $content: "";
+    @each $per in $percents {
+        @if index($percents, $per) == length($percents) {
+            $content: $content + $per; 
+        } @else {
+            $content: $content + $per + ","; 
+        }   
+    }
+    
+    $maintainables: map-merge($maintainables, $maintain) !global;
+    #{$content} {
+        @each $var, $expr in $maintainables { #{$var}: $expr; }
+        @content; 
+    }
+}
+
+// Exmaple usage
+// @include Custom-Animation(Random) {
+//     @include Frame(0% 25%, (width: 0, height: 0)) {
+//         opacity: 0;
+//     } @include Frame(50%, (height: 10rem)) {
+//         opacity: 1;
+//     } @include Frame(100%) {
+//         opacity: 0;
+//     }
+// }
+
+// --- To be able to use animations --- //
+$running: 0s;
+$ignored: false;
+
+@mixin Use-Animations($animations...) {
+    // The default properties of the animation if they are not already spesified
+    $defaults: (none, 0s, ease, 0s, 1, normal, both);
+
+    // The compined result of all the animations to be put into the animation property
+    $result: "";
+
+    $ignored: false !global;
+
+    @if (length(nth($animations, 1)) >= 4) {
+        $running: nth(nth($animations, 1), 4) !global;
+    } @else {
+        $running: 0s !global;
+    }
+
+    // For each animation of all of the animations provided
+    @each $anim in $animations {
+
+        // Current is the the combined properties of the animation put into a string
+        // we need to seperate the properties in order to set defaults and use custom
+        // variables
+        $current: "";
+
+        $running-prev: $running;
+
+        // This loops through all the possible props that could be given to the mixin
+        // There is a maxium of 7 props that can to be passed through
+        // name - duration - easing-function - delay - iteration-count - direction - fill-mode
+        @for $prop from 1 through 7 {
+
+            // If the the current animation has more properties than the current prop number
+            // that means that the animation has the property and can be set
+            @if length($anim) >= $prop {
+
+                // This is the current animation prop
+                $anim-prop: nth($anim, $prop); 
+
+                // if the anim-prop is equal to default add a the default prop to it
+                @if $anim-prop == default {
+                    $current: $current + nth($defaults, $prop); // The space makes sure props don't combine
+                } 
+
+                // If the propery is on the duration time (aka, the second property)
+                @else if $prop == 2 {
+                    // If the property is a list 
+                    @if type-of($anim-prop) == "list" {
+                        $operator-or-val: nth($anim-prop, 2);
+                        @if length($anim-prop) >= 3 {$number: nth($anim-prop, 3); }
+                        
+                        @if nth($anim-prop, 1) == default {
+                            // finds the proper athimitic operator
+                            @if $operator-or-val == plus {
+                                $current: $current + (nth($defaults, $prop) + $number);
+                            } @else if $operator-or-val == minus {
+                                $current: $current + (nth($defaults, $prop) - $number);
+                            } @else if $operator-or-val == multiply {
+                                $current: $current + (nth($defaults, $prop) * $number);
+                            } @else if $operator-or-val == divide {
+                                $current: $current + (nth($defaults, $prop) / $number);
+                            }
+
+                        } @else if nth($anim-prop, 1) == running {
+                            // finds the proper athimitic operator
+                            @if $operator-or-val == plus {
+                                $current: $current + ($running-prev + $number);
+                                $running: $running + $number;
+                            } @else if $operator-or-val == minus {
+                                $current: $current + ($running-prev - $number);
+                                $running: $running - $number;
+                            } @else if $operator-or-val == multiply {
+                                $current: $current + ($running-prev * $number);
+                                $running: $running * $number;
+                            } @else if $operator-or-val == divide {
+                                $current: $current + ($running-prev / $number);
+                                $running: $running / $number;
+                            }
+                        } @else if nth($anim-prop, 1) == ignore {
+                            $ignored: true !global;
+                            $current: $current + $operator-or-val;
+                        }
+                    }
+
+                    // If the anim-prop is simply running then
+                    // set it as the variable running
+                    @else if $anim-prop == running {
+                        $current: $current + $running-prev;
+                    } 
+                    
+                    // If none of the above are true then this must be a number
+                    @else {
+                        $current: $current + $anim-prop;
+                        @if not $ignored {
+                            $running: $running-prev + $anim-prop !global; // This adds the duration to the the running value
+                        }
+                    }
+                } 
+                
+                // If the prop value is the delay
+                @else if $prop == 4 { 
+                    // If the anim-prop is a list meaning that it is a complex variable
+                    @if type-of($anim-prop) == "list" {
+                        $operator: nth($anim-prop, 2);
+                        $number: nth($anim-prop, 3);
+                        
+                        @if nth($anim-prop, 1) == default {
+                            // finds the proper athimitic operator
+                            @if $operator == plus {
+                                $current: $current + (nth($defaults, $prop) + $number);
+                            } @else if $operator == minus {
+                                $current: $current + (nth($defaults, $prop) - $number);
+                            } @else if $operator == multiply {
+                                $current: $current + (nth($defaults, $prop) * $number);
+                            } @else if $operator == divide {
+                                $current: $current + (nth($defaults, $prop) / $number);
+                            }
+
+                        } @else if nth($anim-prop, 1) == running {
+                            // finds the proper athimitic operator
+                            @if $operator == plus {
+                                $current: $current + ($running-prev + $number);
+                                $running: $running + $number;
+                            } @else if $operator == minus {
+                                $current: $current + ($running-prev - $number);
+                                $running: $running - $number;
+                            } @else if $operator == multiply {
+                                $current: $current + ($running-prev * $number);
+                                $running: $running * $number;
+                            } @else if $operator == divide {
+                                $current: $current + ($running-prev / $number);
+                                $running: $running / $number;
+                            }
+                        }
+                    }
+                    
+                    // if the anim delay is equal to running
+                    @else if $anim-prop == running {
+                        $current: $current + $running-prev;
+                    } 
+                    
+                    @else {
+                        $current: $current + $anim-prop;
+                    }
+                } 
+                
+                // Otherwise it is just a normal prop
+                @else {
+                    $current: $current + $anim-prop;
+                }
+            } 
+
+            // If the prop list is less than the amount of props then add the deafault
+            @else {
+                $current: $current + nth($defaults, $prop);
+            }
+
+            $current: $current + " ";
+        }
+
+        $ignored: false !global;
+
+        // Append the current string to the result
+        $result: $result + $current;
+
+        // If this is not the last animation, add a comma for the next animation
+        @if index($animations, $anim) != length($animations) {
+            $result: $result + ","
+        }
+    }
+
+    animation: unquote($result);
+}
+
+// Exmaple usage
+// .selector {
+//     @include Use-Animations(
+//         Fade-In 2s default 1s,
+//         Fade-Out (ignore, 1s) default running,
+//         Destroy 0s default (running, plus, 1),
+//     )
+// }
+
+// --- Common Animations --- //
+// Just uncomment out the ones you want
+// unfortunatly sass wont allow you to use mixins dynamically
+// So this is the best option
+
+// Fade-Out
+// sets the opacity of the element to 0
+
+// @include Custom-Animation(Fade-Out) {
+//     @include Frame(100%) {
+//         opacity: 0;
+//     } 
+// }
+
+// Fade-In
+// sets the opacity of the element to 1
+
+// @include Custom-Animation(Fade-In) {
+//     @include Frame(100%) {
+//         opacity: 1;
+//     }
+// }
+
+// Appear
+// makes the element visible
+// used normally after Disappear
+
+// @include Custom-Animation(Appear) {
+//     @include Frame(0%) {
+//         visibility: hidden;
+//     } @include Frame(100%) {
+//         visibility: visible;   
+//     }
+// }
+
+// Disappear
+// makes the element invisible
+// used noramlly before Appear
+
+// @include Custom-Animation(Disappear) {
+//     @include Frame(0%) {
+//         visibility: visible;
+//     } @include Frame(100%) {
+//         visibility: hidden;
+//     }
+// }
+
+// Destroy
+// does it best to completley remove an element from view
+
+// @include Custom-Animation(Destroy) {
+//     @include Frame(100%) {
+//         height: 0;
+//         opacity: 0;
+//         visibility: hidden;
+//     }
+// }
+
+// Grow-Width
+// grows the element to the full width of the container
+
+// @include Custom-Animation(Grow-Width) {
+//     @include Frame(100%) {
+//         width: 100%;
+//     }
+// }
+
+// Grow-Height
+// grows the element to the full height of the container
+
+// @include Custom-Animation(Grow-Height) {
+//     @include Frame(100%) {
+//         height: 100%;
+//     }
+// }
+
+// Grow
+// grows the element to the full width and height of the container
+
+// @include Custom-Animation(Grow) {
+//     @include Frame(100%) {
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+
+// Shrink-Width
+// Shrinks the element to 0 width over time
+
+// @include Custom-Animation(Shrink-Width) {
+//     @include Frame(100%) {
+//         width: 0;
+//     }
+// }
+
+// Shrink-Height
+// Shrinks the element to 0 height over time
+
+// @include Custom-Animation(Shrink-Height) {
+//     @include Frame(100%) {
+//         height: 0;
+//     }
+// }
+
+// Shrink
+// Shrinks the element to 0 width and height over time
+
+// @include Custom-Animation(Shrink) {
+//     @include Frame(100%) {
+//         width: 0;
+//         height: 0;
+//     }
+// }
