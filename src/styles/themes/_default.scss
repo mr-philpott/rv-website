@@ -1,5 +1,11 @@
+@use "sass:color" as *;
+
 //website palette
+
+$background-light: adjust(#F1EADA, $lightness: 5%);
 $background: #F1EADA;
+$background-dark: adjust(#F1EADA, $lightness: -5%);
+
 $primary: #C64733;
 
 $grey: #ABA8A7;
