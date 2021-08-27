@@ -1,8 +1,7 @@
 @use "../themes/default" as *;
 
 .app {
-    background-color: $bg;
-    // background: linear-gradient(rgba($txt-lgt, 0.4), rgba($txt-lgt, 0.4)), url("/src/assets/images/matt-artz-nTRDnDdDYk8-unsplash.jpg");
+    background: linear-gradient(rgba(black, 0.4), rgba(black, 0.4)), url("/src/assets/images/matt-artz-nTRDnDdDYk8-unsplash.jpg");
     background-size: cover;
     background-blend-mode: darken;
     background-position-y: center;
@@ -17,14 +16,14 @@
         .triangle {
             width: 0;
             height: 0;
-            border-bottom: 5rem solid $txt-lgt;
+            // border-bottom: 5rem solid $txt-lgt;
             border-left: 100vw solid transparent;
         }
 
         .block {
             width: 100%;
             height: 3rem;
-            background-color: $txt-lgt;
+            background-color: $black;
         }
     }
 
