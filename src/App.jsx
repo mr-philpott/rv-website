@@ -1,4 +1,5 @@
 import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Services from "./Components/Services";
 
@@ -9,6 +10,7 @@ function App() {
       <Home />
       <article>
         <Services />
+        <Footer />
       </article>
     </main>
   );
