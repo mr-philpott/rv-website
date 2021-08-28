@@ -402,6 +402,12 @@ footer img {
   width: 55px;
   margin: 10px 0 5px;
 }
+footer .image-credits {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1%;
+  align-items: center;
+}
 
 .home {
   display: flex;
