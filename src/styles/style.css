@@ -330,4 +330,12 @@ nav .links {
   align-items: center;
   gap: 3rem;
   padding: 0 3.5rem;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  padding: 3rem 4rem;
+  width: 100%;
+  background-color: #b2402e;
 }/*# sourceMappingURL=style.css.map */

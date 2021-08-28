@@ -1,0 +1,10 @@
+@use "../themes/default" as *;
+@use "../utils" as *;
+
+footer{
+    display: flex;
+    position: fixed;
+    padding: 3rem 4rem;
+    width: 100%;
+    background-color: $primary-dark;
+}
