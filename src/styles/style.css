@@ -279,8 +279,15 @@ template {
   display: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
 .app {
-  background-color: #f7f6ed;
   background-size: cover;
   background-blend-mode: darken;
   background-position-y: center;
@@ -288,63 +295,7 @@ template {
   min-height: 100vh;
   overflow-x: hidden;
 }
-.app .road {
-  grid-row: 1/2;
-  grid-column: 1/2;
-  margin-top: auto;
-}
-.app .road .triangle {
-  width: 0;
-  height: 0;
-  border-bottom: 5rem solid #2e3038;
-  border-left: 100vw solid transparent;
-}
-.app .road .block {
-  width: 100%;
-  height: 3rem;
-  background-color: #2e3038;
-}
-.app img {
-  margin: auto;
-  margin-bottom: 2.5vh;
-  grid-row: 1/2;
-  grid-column: 1/2;
-  width: 47.5rem;
-  -webkit-animation: slide-in 1.5s cubic-bezier(0.5, 0.5, 0.1, 1) 0.35s;
-          animation: slide-in 1.5s cubic-bezier(0.5, 0.5, 0.1, 1) 0.35s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
 
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translate(75vw, -2.5rem) skew(-10deg);
-  }
-  80% {
-    transform: translate(0, 0) skewX(0deg);
-  }
-  90% {
-    transform: translate(0.25rem, 0) skewX(-0.5deg);
-  }
-  100% {
-    transform: translate(0, 0) skew(0deg);
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translate(75vw, -2.5rem) skew(-10deg);
-  }
-  80% {
-    transform: translate(0, 0) skewX(0deg);
-  }
-  90% {
-    transform: translate(0.25rem, 0) skewX(-0.5deg);
-  }
-  100% {
-    transform: translate(0, 0) skew(0deg);
-  }
-}
 nav {
   position: fixed;
   top: 0;
@@ -354,10 +305,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  background-color: #821720;
+  background-color: #b2402e;
   font-size: 1.25rem;
   font-family: sans-serif;
-  color: #f2f2f2;
+  color: #eee;
 }
 nav .nav-branding {
   display: flex;
@@ -369,7 +320,7 @@ nav .nav-branding {
 nav .nav-branding .logo {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #bf222f;
+  background-color: #cf5744;
   border-radius: 50%;
 }
 nav .links {

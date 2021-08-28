@@ -6,9 +6,21 @@ const Nav = () => {
                 <div className="company-name">RV Inspection and Repair Services</div>
             </div>
             <ul className="links">
-                <li>Link1</li>
-                <li>Link2</li>
-                <li>Link3</li>
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+                <li>
+                    <a href="#gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="#gallery">
+                        Contact
+                    </a>
+                </li>
             </ul>
             {/* <div className="hamburger"></div> */}
         </nav>

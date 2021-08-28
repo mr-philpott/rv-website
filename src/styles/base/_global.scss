@@ -1,1 +1,7 @@
-// This file contains all of the global styles for the stylesheet
+a {
+    color: inherit;
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+    }
+}
