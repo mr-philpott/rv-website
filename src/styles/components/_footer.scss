@@ -2,9 +2,27 @@
 @use "../utils" as *;
 
 footer{
+    font-family: sans-serif;
     display: flex;
-    position: fixed;
-    padding: 3rem 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 1rem;
     width: 100%;
     background-color: $primary-dark;
+    color: #eee;
+    h2{
+        //font-size: 1.25rem;
+        margin: 10px 0 0;
+        font-weight: bold;
+    }
+    ul{
+        margin: 5px 0 5px;
+    }
+    img{
+        width: 55px;
+        margin: 10px 0 5px;
+    }
 }
