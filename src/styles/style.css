@@ -379,6 +379,40 @@ nav .links {
   width: 50%;
 }
 
+.photos {
+  font-family: sans-serif;
+  background: #F1EADA;
+}
+.photos h3 {
+  text-align: center;
+  background: #b2402e;
+  color: #eee;
+  font-size: 3rem;
+  padding: 1rem;
+}
+.photos .gallery-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "big big one two" "long long long long";
+  justify-items: center;
+  place-items: center stretch;
+  grid-gap: 0.5%;
+  margin: 1%;
+}
+.photos .gallery-grid #img-bigsquare {
+  grid-area: big;
+}
+.photos .gallery-grid #img-square1 {
+  grid-area: one;
+}
+.photos .gallery-grid #img-square2 {
+  grid-area: two;
+}
+.photos .gallery-grid #img-long {
+  grid-area: long;
+}
+
 footer {
   font-family: sans-serif;
   display: flex;

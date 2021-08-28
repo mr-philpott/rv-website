@@ -1,5 +1,4 @@
 import svg from "../assets/images/Steren_Gear.svg"
-//import gear from "../assets/images/gear.svg"
 
 const Footer = () => {
   return (

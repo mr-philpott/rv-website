@@ -1,2 +1,43 @@
 @use "../themes/default" as *;
 @use "../utils" as *;
+
+
+
+.photos{
+    font-family: sans-serif;
+    background: $background;
+    h3{
+        text-align: center;
+        background: $primary-dark;
+        color: #eee;
+        font-size: 3rem;padding: 1rem;
+    }
+
+    .gallery-grid{
+        display: grid;
+        //🌵 grid stuff 🌵
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        #img-bigsquare{
+            grid-area: big
+        }
+        #img-square1{
+            grid-area: one
+        }
+        #img-square2{
+            grid-area: two
+        }
+        #img-long{
+            grid-area: long
+        }
+        grid-template-areas: 
+        "big big one two"
+        "long long long long";
+
+        justify-items: center;
+        place-items: center stretch;
+        grid-gap: .5%;
+        margin: 1%;
+    }
+    
+}
