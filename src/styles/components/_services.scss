@@ -1,0 +1,53 @@
+@use "../themes/default" as *;
+@use "../utils" as *;
+
+.services {
+    font-family: sans-serif;
+    h3 {
+        text-align: center;
+        background-color: $primary-dark;
+        font-size: 3rem;
+        padding: 1rem;
+        color: #eee;
+    }
+
+    .options {
+        display: flex;
+        gap: 1rem;
+        padding: .5rem 3rem;
+        background-color: $background;
+        > * {
+            width: 50%;
+            padding: 1rem;
+            background-color: $background;
+            border: solid 1rem $primary-dark;
+            border-radius: .5rem;
+
+            h4 {
+                color: $primary-dark;
+                font-size: 2.5rem;
+                background-color: $background;
+                margin-bottom: .5rem;
+                font-weight: bold;
+                text-align: center;
+                
+                &::after {
+                    width: 5rem;
+                    height: .5rem;
+                    background-color: $primary;
+                }
+            }
+
+            .content {
+                display: flex;
+                p {
+                    width: 50%;
+                    font-size: 1.25rem;
+                }
+                .image {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
