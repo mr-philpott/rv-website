@@ -4,11 +4,20 @@ const Home = () => {
     return (
         <div className="home">
             <div className="photo">
-                {/* Replace Picsum photo with image of person */}
-                <img src="https://picsum.photos/1000/1000" alt="Photo of me" />
+                <div className="img">
+                    <img src="https://picsum.photos/1000/2000" alt="fight me" />
+                </div>
             </div>
-            <div className="slogan">
-                <h2>Have an RV Problem? Rely on us to get the job done</h2>
+            <div className="landing-text">
+                <h1>RV Inspection and Air Conditioning Repair</h1>
+            </div>
+            <div className="hire-me">
+                <div className="rectangle">
+                    <div className="triangle"></div>
+                    <button>
+                        Hire Me!
+                    </button>
+                </div>
             </div>
         </div>
     )

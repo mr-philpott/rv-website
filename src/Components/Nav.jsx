@@ -9,7 +9,7 @@ const Nav = () => {
                 <div className="nav-branding">
                     <div className="logo">
                     </div>
-                    <div className="company-name">RV / AC Inspection and Repair</div>
+                    <div className="company-name">RV / AC Service</div>
                 </div>
                 <ul className="links">
                     <li>
@@ -46,21 +46,33 @@ const Nav = () => {
                     <li>
                         <a href="#services">
                             Services
+                            <div className="icon">
+                                icon
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#gallery">
                             Gallery
+                            <div className="icon">
+                                icon
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#review">
                             Review
+                            <div className="icon">
+                                icon
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#gallery">
                             Contact
+                            <div className="icon">
+                                icon
+                            </div>
                         </a>
                     </li>
                 </ul>

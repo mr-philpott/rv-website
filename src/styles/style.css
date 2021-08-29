@@ -310,7 +310,7 @@ nav {
   font-size: 1.5rem;
   font-family: sans-serif;
   color: #eee;
-  z-index: 2;
+  z-index: 99;
 }
 nav .nav-branding {
   display: flex;
@@ -389,7 +389,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 }
 .nav-dropdown.show {
   position: fixed;
-  z-index: 1;
+  z-index: 98;
 }
 .nav-dropdown .links {
   font-size: 3rem;
@@ -403,9 +403,22 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 }
 .nav-dropdown .links li a {
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-dropdown .links li a .icon {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ABA8A7;
 }
 
-@media screen and (max-width: 1208px) {
+@media screen and (max-width: 1055px) {
   nav {
     padding: 0.5rem 1rem;
   }
@@ -414,7 +427,10 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
     gap: 2rem;
   }
 }
-@media screen and (max-width: 871px) {
+@media screen and (max-width: 764px) {
+  nav {
+    font-size: 1.5rem;
+  }
   nav .links {
     display: none;
   }
@@ -425,6 +441,34 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
     align-items: center;
     width: 1.5rem;
     height: 1.5rem;
+  }
+}
+@media screen and (max-width: 471px) {
+  nav .nav-branding {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  nav .nav-branding .logo {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .nav-dropdown {
+    padding: 2rem;
+  }
+  .nav-dropdown .links {
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .nav-dropdown .links li a {
+    font-weight: bold;
   }
 }
 .services {
@@ -539,23 +583,70 @@ footer .image-credits {
 }
 
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  background-color: #F1EADA;
+  width: 100vw;
   height: 100vh;
+  display: grid;
+  background-color: #f8f5ed;
 }
 .home .photo {
-  border-radius: 50%;
-  width: 25rem;
-  height: 25rem;
-  border: 0.5rem solid #C64733;
+  width: 100vw;
+  height: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  align-items: flex-end;
+}
+.home .photo .img {
+  height: 40rem;
+  margin-left: auto;
+  width: 75vw;
   overflow: hidden;
 }
-.home .slogan {
-  font-weight: bolder;
+.home .landing-text {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding: 4rem 2rem;
+  color: #17292E;
+}
+.home .landing-text h1 {
   font-family: sans-serif;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.home .hire-me {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.home .hire-me .rectangle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 7.5rem;
+  background-color: #b2402e;
+  display: flex;
+  font-family: sans-serif;
+}
+.home .hire-me .rectangle .triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 3rem solid #b2402e;
+  border-right: 150vw solid transparent;
+  z-index: 0;
+  position: absolute;
+  top: -3rem;
+}
+.home .hire-me .rectangle button {
+  width: 70%;
+  height: 3.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #17292E;
+  background-color: #F1EADA;
 }/*# sourceMappingURL=style.css.map */

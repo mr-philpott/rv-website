@@ -2,22 +2,76 @@
 @use "../utils" as *;
 
 .home {
-    @include Flex-Center(column);
-    gap: 2.5rem;
-    background-color: $background;
+    width: 100vw;
     height: 100vh;
+    display: grid;
+    background-color: $background-light;
 
+    
     .photo {
-        border-radius: 50%;
-        width: 25rem;
-        height: 25rem;
-        border: .5rem solid $primary;
-        overflow: hidden;
+        width: 100vw;
+        height: 100%;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        display: flex;
+        align-items: flex-end;
+        
+        .img {
+            height: 40rem;
+            margin-left: auto;
+            width: 75vw;
+            overflow: hidden;
+        }
     }
 
-    .slogan {
-        font-weight: bolder;
-        font-family: sans-serif;
-        font-size: 3rem;
+    .landing-text {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        padding: 4rem 2rem;
+        color: $black;
+
+        h1 {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+    }
+    
+    .hire-me {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .rectangle {
+            position: relative;
+            @include Flex-Center;
+            z-index: 1;
+            width: 100%;
+            height: 7.5rem;
+            background-color: $primary-dark;
+            display: flex;
+            font-family: sans-serif;
+
+            .triangle {
+                width: 0;
+                height: 0;
+                border-bottom: 3rem solid $primary-dark;
+                border-right: 150vw solid transparent;
+                z-index: 0;
+                position: absolute;
+                top: -3rem;
+            }
+
+            button {
+                width: 70%;
+                height: 3.5rem;
+                font-size: 2rem;
+                font-weight: bold;
+                color: $black;
+                background-color: $background;
+            }
+        }
     }
 }
