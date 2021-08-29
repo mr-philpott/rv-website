@@ -294,28 +294,30 @@ a:visited {
   display: grid;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
   background-color: #b2402e;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: sans-serif;
   color: #eee;
+  z-index: 2;
 }
 nav .nav-branding {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 nav .nav-branding .logo {
   width: 2.5rem;
@@ -328,10 +330,103 @@ nav .links {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   padding: 0 3.5rem;
 }
+nav .nav-toggle {
+  display: none;
+}
+nav .nav-toggle .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 100%;
+}
+nav .nav-toggle .hamburger .slice {
+  height: 0.25rem;
+  width: 100%;
+  background-color: #eee;
+}
+nav .nav-toggle .cross {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 2rem;
+  height: 100%;
+}
+nav .nav-toggle .cross .slice {
+  height: 0.25rem;
+  width: 100%;
+  background-color: #eee;
+}
+nav .nav-toggle .cross .slice:nth-of-type(1) {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  transform: translate(0, 0.75rem) rotate(45deg);
+}
+nav .nav-toggle .cross .slice:nth-of-type(2) {
+  display: none;
+}
+nav .nav-toggle .cross .slice:nth-of-type(3) {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  transform: translate(0, 0.75rem) rotate(-45deg);
+}
 
+.nav-dropdown {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eae0c8;
+  padding: 3rem;
+}
+@media screen and (min-width: 871px) {
+  .nav-dropdown {
+    display: none;
+  }
+}
+.nav-dropdown.hide {
+  display: none;
+}
+.nav-dropdown.show {
+  position: fixed;
+  z-index: 1;
+}
+.nav-dropdown .links {
+  font-size: 3rem;
+  font-family: sans-serif;
+  color: #17292E;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.nav-dropdown .links li a {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1208px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  nav .links {
+    padding: 0;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 871px) {
+  nav .links {
+    display: none;
+  }
+  nav .nav-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 .services {
   font-family: sans-serif;
 }
