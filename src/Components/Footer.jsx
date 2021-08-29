@@ -1,5 +1,4 @@
 import svg from "../assets/images/Steren_Gear.svg"
-//import gear from "../assets/images/gear.svg"
 
 const Footer = () => {
   return (
@@ -7,7 +6,9 @@ const Footer = () => {
         <img src={svg} alt="gear" />
 
         <ul className="contact">
-            <h2></h2>
+            <h2>Contact Us</h2>
+            <li>Phone Number</li>
+            <li>Email</li>
         </ul>
 
         <ul className="copyright">
@@ -16,12 +17,12 @@ const Footer = () => {
 
         {/* DONT DELETE */}
         {/* revise for later */}
-        <ul className="img-credits">
-            <h2>Images</h2>
-            {/* <li> Photo by{" "} <a href="https://unsplash.com/@brianwangenheim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Brian Wangenheim </a> </li> */}
-            {/* <li> Photo by{" "} <a href="https://unsplash.com/s/photos/rv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Unsplash </a> </li> */}
-            {/* <li> Photo by{" "} <a href="https://unsplash.com/@mattartz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Matt Artz </a> </li> */}
-            {/* <li> Photo by{" "} <a href="https://unsplash.com/s/photos/forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Unsplash</a> </li> */}
+        <h2>Images</h2>
+        <ul className="image-credits">
+            <li> Photo by{" "} <a href="https://unsplash.com/@brianwangenheim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Brian Wangenheim </a> </li>
+            <li> Photo by{" "} <a href="https://unsplash.com/s/photos/rv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Unsplash </a> </li>
+            <li> Photo by{" "} <a href="https://unsplash.com/@mattartz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Matt Artz </a> </li>
+            <li> Photo by{" "} <a href="https://unsplash.com/s/photos/forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Unsplash</a> </li>
             <li> Photo by <a href="https://www.pexels.com/@enric-cruz-lopez"> Enric Cruz López from Pexels </a> </li>
             <li> Photo by <a href="https://www.pexels.com/@kindelmedia"> Kindel Media from Pexels </a> </li>
             <li> Photo by <a href="https://www.pexels.com/@martin-alargent-1165956"> Martin Alargent from Pexels</a> </li>

@@ -2,6 +2,7 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Services from "./Components/Services";
+import Gallery from "./Components/Gallery";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <article>
         <Services />
+        <Gallery />
         <Footer />
       </article>
     </main>
