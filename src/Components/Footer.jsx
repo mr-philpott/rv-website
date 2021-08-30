@@ -5,12 +5,6 @@ const Footer = () => {
     <footer>
         <img src={svg} alt="gear" />
 
-        <ul className="contact">
-            <h2>Contact Us</h2>
-            <li>Phone Number</li>
-            <li>Email</li>
-        </ul>
-
         <ul className="copyright">
             <h2>Copyright © 2021 RV/AC inspectors - all rights reserved.</h2>
         </ul>
@@ -27,7 +21,6 @@ const Footer = () => {
             <li> Photo by <a href="https://www.pexels.com/@kindelmedia"> Kindel Media from Pexels </a> </li>
             <li> Photo by <a href="https://www.pexels.com/@martin-alargent-1165956"> Martin Alargent from Pexels</a> </li>
             <li> Photo by <a href="https://publicdomainvectors.org/en/free-clipart/Gear-shape-vector-design-element/7424.html"> Public Domain Vectors </a> </li>
-            <li> Photo by <a href="https://publicdomainvectors.org/en/free-clipart/Industriequartier-coat-of-arms-no-frame-vector-clip-art/13140.html"> Public Domain Vectors </a> </li>
         </ul>
     </footer>
   );
