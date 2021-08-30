@@ -9,7 +9,18 @@ const Home = () => {
                 </div>
             </div>
             <div className="landing-text">
-                <h1>RV Inspection and Air Conditioning Repair</h1>
+                <div className="main">
+                    <h1>
+                        RV Inspection and Air Conditioning Repair
+                        <div className="underline"></div>
+                    </h1>
+                    <p>
+                        Welcome! I am a RV inspectionist and Air Conditioning Repair man.
+                    </p>
+                </div>
+                <button>
+                    Hire Me!
+                </button>
             </div>
             <div className="hire-me">
                 <div className="rectangle">
