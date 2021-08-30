@@ -3,49 +3,132 @@
 
 .services {
     font-family: sans-serif;
-    h3 {
-        text-align: center;
-        background-color: $primary-dark;
+    background-color: $primary-dark;
+    padding: 0 5rem;
+    padding-bottom: 5rem;
+    
+    h2 {
         font-size: 3rem;
-        padding: 1rem;
-        color: #eee;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $background;
     }
-
-    .options {
+    
+    .description {
         display: flex;
-        gap: 1rem;
-        padding: .5rem 3rem;
-        background-color: $background;
-        > * {
-            width: 50%;
-            padding: 1rem;
-            background-color: $background;
-            border: solid 1rem $primary-dark;
-            border-radius: .5rem;
+        gap: 3rem;
+        color: $black;
 
-            h4 {
-                color: $primary-dark;
-                font-size: 2.5rem;
-                background-color: $background;
-                margin-bottom: .5rem;
+        .service-section {
+            width: 50%;
+            background-color: $background;
+            padding: 2.5rem;
+
+            h3 {
+                font-size: 2rem;
                 font-weight: bold;
                 text-align: center;
-                
-                &::after {
-                    width: 5rem;
-                    height: .5rem;
-                    background-color: $primary;
-                }
             }
 
-            .content {
-                display: flex;
+            .on-shrink {
                 p {
-                    width: 50%;
-                    font-size: 1.25rem;
+                    font-size: 1.75rem;
+                    padding: 1rem 5rem;
+                    height: 10rem;
                 }
-                .image {
-                    width: 50%;
+    
+                img {
+                    padding: 3rem;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.triangle-container {
+    position: relative;
+    height: 10rem;
+
+    .triangle-down {
+        width: 0;
+        height: 0;
+        border-top: 10rem solid $primary-dark;
+        border-right: 150vw solid transparent;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .services {
+        padding: 0 2.5rem;
+        padding-bottom: 2.5rem;
+        
+        .description {
+            gap: 2rem;
+    
+            .service-section {
+                padding: 2rem;
+    
+                h3 {
+                    text-align: start;
+                }
+
+                .on-shrink {
+                    p {
+                        font-size: 1.25rem;
+                        padding: 1rem 2.5rem;
+                        height: 7.5rem;
+                    }
+        
+                    img {
+                        padding: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .services {
+        .description {
+            flex-direction: column;
+
+            .service-section {
+                width: 100%;
+
+                .on-shrink {
+                    display: flex;
+
+                    img {
+                        padding: 0;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services {
+        .description {
+            .service-section {
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+                .on-shrink {
+                    p {
+                        padding: .25rem 1rem;
+                        font-size: 1.125rem;
+                    }
+
+                    img {
+                        display: none;
+                    }
                 }
             }
         }

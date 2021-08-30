@@ -86,7 +86,7 @@
             display: flex;
             font-family: sans-serif;
 
-            .triangle {
+            .triangle-up {
                 width: 0;
                 height: 0;
                 border-bottom: 3rem solid $primary-dark;
@@ -166,10 +166,10 @@
 
         .hire-me {
             .rectangle {
-                .triangle {
-                    border-bottom: 5rem solid $primary-dark;
+                .triangle-up {
+                    border-bottom: 10rem solid $primary-dark;
                     border-right: 150vw solid transparent;
-                    top: -4.9rem;
+                    top: -9.9rem;
                 }
                 button {
                     display: none;
