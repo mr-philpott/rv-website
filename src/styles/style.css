@@ -530,28 +530,8 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   padding: 1rem;
 }
 .photos .gallery-grid {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: "big big one two" "long long long long";
-  justify-items: center;
-  place-items: center stretch;
-  grid-gap: 0.5%;
-  margin: 1%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.photos .gallery-grid #img-bigsquare {
-  grid-area: big;
-}
-.photos .gallery-grid #img-square1 {
-  grid-area: one;
-}
-.photos .gallery-grid #img-square2 {
-  grid-area: two;
-}
-.photos .gallery-grid #img-long {
-  grid-area: long;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -721,15 +701,8 @@ footer .image-credits {
     width: 50vw;
   }
   .home .photo .img img {
-<<<<<<< HEAD
-    height: 40rem;
-    width: 75vw;
-    object-fit: cover;
-=======
     height: 55rem;
-    -o-object-fit: cover;
-       object-fit: cover;
->>>>>>> 4d17d5b1cc9a11ef2d1f653043032cf2b0aed133
+    object-fit: cover;
   }
   .home .hire-me .rectangle .triangle {
     border-bottom: 5rem solid #b2402e;

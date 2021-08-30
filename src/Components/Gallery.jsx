@@ -6,10 +6,17 @@ const Gallery = () => {
             <h3>Gallery</h3>
 
             <div className="gallery-grid">
-                <img src="https://picsum.photos/725/400" alt="example" id="img-bigsquare"/>
-                <img src="https://picsum.photos/550/400" alt="example" id="img-square1"/>
-                <img src="https://picsum.photos/550/400" alt="example" id="img-square2"/>
-                <img src="https://picsum.photos/1900/600" alt="example" id="img-long"/>
+                <div className="row">
+                    <img src="https://picsum.photos/850/500" alt="example" id="img-big1square"/>
+                    <img src="https://picsum.photos/550/500" alt="example" id="img-square1"/>
+                </div>
+                <div className="row">
+                    <img src="https://picsum.photos/1400/700" alt="example" id="img-long"/>
+                </div>
+                <div className="row">
+                    <img src="https://picsum.photos/850/500" alt="example" id="img-big2square"/>
+                    <img src="https://picsum.photos/550/500" alt="example" id="img-square2"/>
+                </div>
             </div>
         </section>
     )
