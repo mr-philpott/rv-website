@@ -8,4 +8,4 @@
 ## Day 2
 
 - Ethan: Worked on Home and Services page, both somewhat finsihed. Still need to work some more on them to make them look **perfect**.
-- Alisson: ...
+- Alisson: worked on footer and gallery
