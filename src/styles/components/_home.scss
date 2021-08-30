@@ -17,13 +17,13 @@
         align-items: flex-end;
         
         .img {
-            height: 40rem;
+            height: 50rem;
             margin-left: auto;
             width: 75vw;
             overflow: hidden;
 
             img {
-                height: 40rem;
+                height: 50rem;
                 width: 75vw;
                 object-fit: cover;
             }
@@ -154,11 +154,11 @@
             align-items: flex-end;
             
             .img {
-                height: 55rem;
+                height: 100vh;
                 width: 50vw;
     
                 img {
-                    height: 55rem;
+                    height: 100vh;
                     object-fit: cover;
                 }
             }

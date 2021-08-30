@@ -504,7 +504,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   height: 10rem;
 }
 .services .description .service-section .on-shrink img {
-  padding: 3rem;
+  padding: 0 10rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -633,13 +633,13 @@ footer .image-credits {
   align-items: flex-end;
 }
 .home .photo .img {
-  height: 40rem;
+  height: 50rem;
   margin-left: auto;
   width: 75vw;
   overflow: hidden;
 }
 .home .photo .img img {
-  height: 40rem;
+  height: 50rem;
   width: 75vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -752,11 +752,11 @@ footer .image-credits {
     align-items: flex-end;
   }
   .home .photo .img {
-    height: 55rem;
+    height: 100vh;
     width: 50vw;
   }
   .home .photo .img img {
-    height: 55rem;
+    height: 100vh;
     -o-object-fit: cover;
        object-fit: cover;
   }
