@@ -7,18 +7,18 @@ const Services = () => {
                 <h2>Services</h2>
                 <div className="description">
                     <div className="service-section inspection">
-                        <h3>RV Inspection</h3>
-                        <div className="on-shrink">
+                        <div className="info">
+                            <h3>RV Inspection</h3>
                             <p>I inspect RVs, providing insight into how the RVs are currently feeling. I think I’m a bit of an RV therapist myself.</p>
-                            <img src="https://picsum.photos/500/600" alt="Inspection Image" />
                         </div>
+                        <img src="https://picsum.photos/500/600" alt="Inspection Image" />
                     </div>
                     <div className="service-section repair">
-                        <h3>AC Repair</h3>
-                        <div className="on-shrink">
+                        <div className="info">
+                            <h3>AC Repair</h3>
                             <p>I can repair air conditioning units, unless they are running, in which case I’ll die from electrical shock. But anyways, I can still do it!</p>
-                            <img src="https://picsum.photos/500/601" alt="Repair Image" />
                         </div>
+                        <img src="https://picsum.photos/500/601" alt="Repair Image" />
                     </div>
                 </div>
             </section>

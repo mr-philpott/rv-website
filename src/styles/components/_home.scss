@@ -110,8 +110,6 @@
 
 @media screen and (min-width: 765px) {
     .home {
-        height: calc(100vh + 15%);
-
         .landing-text {
             padding: 7.5% 5%;
             padding-bottom: 0;
@@ -166,6 +164,8 @@
 
         .hire-me {
             .rectangle {
+                height: 0;
+
                 .triangle-up {
                     border-bottom: 5rem solid $primary-dark;
                     border-right: 150vw solid transparent;
