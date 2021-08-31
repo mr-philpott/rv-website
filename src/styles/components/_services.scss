@@ -96,7 +96,9 @@
     .services {
         .description {
             .service-section {
-                height: 10rem;
+                // height: 30rem;
+                flex-direction: column;
+
                 .info {
                     width: 100%;
                     h3 {
@@ -109,7 +111,9 @@
                 }
 
                 img {
-                    display: none;
+                    margin: 0 auto;
+                    width: 100%;
+                    max-height: 50vw;
                 }
             }
         }

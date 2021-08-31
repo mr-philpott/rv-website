@@ -535,7 +535,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 }
 @media screen and (max-width: 725px) {
   .services .description .service-section {
-    height: 10rem;
+    flex-direction: column;
   }
   .services .description .service-section .info {
     width: 100%;
@@ -547,7 +547,9 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
     font-size: 1.25rem;
   }
   .services .description .service-section img {
-    display: none;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 50vw;
   }
 }
 .photos {
@@ -661,7 +663,7 @@ footer .image-credits {
 .home .landing-text .main p {
   display: none;
   font-size: 2rem;
-  width: 65%;
+  width: 50%;
   font-family: sans-serif;
   padding: 1% 2.5%;
 }
@@ -721,7 +723,7 @@ footer .image-credits {
     color: #17292E;
   }
   .home .landing-text .main h1 {
-    width: 65%;
+    width: 50%;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 3.5rem;
@@ -729,7 +731,7 @@ footer .image-credits {
   .home .landing-text .main h1 .underline {
     display: block;
     height: 0.5rem;
-    width: 50%;
+    width: 45%;
     background-color: #ABA8A7;
   }
   .home .landing-text .main p {
