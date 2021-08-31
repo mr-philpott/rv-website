@@ -564,7 +564,8 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 .photos .gallery-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  justify-items: center;
   grid-gap: 0.5rem;
   padding-bottom: 1.5rem;
   background: #F1EADA;
@@ -572,6 +573,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 .photos .gallery-grid .row {
   display: flex;
   flex-direction: row;
+  width: 80%;
   grid-gap: 0.5rem;
 }
 
