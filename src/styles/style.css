@@ -752,9 +752,10 @@ footer .image-credits {
     width: 50vw;
   }
   .home .photo .img img {
-    height: 100vh;
+    margin-top: 20vh;
     -o-object-fit: cover;
        object-fit: cover;
+    height: 80vh;
   }
   .home .hire-me .rectangle {
     height: 0;
