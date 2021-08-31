@@ -9,3 +9,8 @@
 
 - Ethan: Worked on Home and Services page, both somewhat finsihed. Still need to work some more on them to make them look **perfect**.
 - Alisson: worked on footer and gallery
+
+## Day 3
+
+- Ethan:
+- Alisson: finished contacts and footer. added almost all triangles. trying best with gallery
