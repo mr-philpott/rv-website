@@ -37,11 +37,6 @@ summary {
   display: list-item;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 img,
 object,
 embed {
@@ -472,103 +467,86 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   }
 }
 .services {
-  font-family: sans-serif;
   background-color: #b2402e;
-  padding: 0 5rem;
-  padding-bottom: 5rem;
+  font-family: sans-serif;
 }
 .services h2 {
   font-size: 3rem;
+  color: #eee;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #F1EADA;
 }
 .services .description {
-  display: flex;
-  gap: 3rem;
   color: #17292E;
+  display: flex;
+  padding: 5%;
+  gap: 2.5%;
 }
 .services .description .service-section {
   width: 50%;
   background-color: #F1EADA;
-  padding: 2.5rem;
+  padding: 2.5%;
+  display: flex;
+  gap: 2rem;
 }
-.services .description .service-section h3 {
+.services .description .service-section .info h3 {
   font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
+  font-weight: 600;
+  margin-bottom: 3.5%;
 }
-.services .description .service-section .on-shrink p {
-  font-size: 1.75rem;
-  padding: 1rem 5rem;
-  height: 10rem;
+.services .description .service-section .info p {
+  font-size: 1.5rem;
 }
-.services .description .service-section .on-shrink img {
-  padding: 0 10rem;
-  width: 100%;
+.services .description .service-section img {
+  width: 35%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.triangle-container {
-  position: relative;
-  height: 10rem;
-}
-.triangle-container .triangle-down {
-  width: 0;
-  height: 0;
-  border-top: 10rem solid #b2402e;
-  border-right: 150vw solid transparent;
-  position: absolute;
-}
-
-@media screen and (max-width: 1180px) {
-  .services {
-    padding: 0 2.5rem;
-    padding-bottom: 2.5rem;
+@media screen and (max-width: 1129px) {
+  .services .description .service-section .info h3 {
+    font-size: 1.5rem;
   }
-  .services .description {
-    gap: 2rem;
-  }
-  .services .description .service-section {
-    padding: 2rem;
-  }
-  .services .description .service-section h3 {
-    text-align: start;
-  }
-  .services .description .service-section .on-shrink p {
+  .services .description .service-section .info p {
     font-size: 1.25rem;
-    padding: 1rem 2.5rem;
-    height: 7.5rem;
-  }
-  .services .description .service-section .on-shrink img {
-    padding: 2.5rem;
   }
 }
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 994px) {
   .services .description {
     flex-direction: column;
+    gap: 1rem;
   }
   .services .description .service-section {
     width: 100%;
+    height: 25%;
   }
-  .services .description .service-section .on-shrink {
-    display: flex;
-  }
-  .services .description .service-section .on-shrink img {
-    padding: 0;
+  .services .description .service-section .info {
     width: 50%;
   }
-}
-@media screen and (max-width: 600px) {
-  .services .description .service-section h3 {
+  .services .description .service-section .info h3 {
     font-size: 1.5rem;
   }
-  .services .description .service-section .on-shrink p {
-    padding: 0.25rem 1rem;
-    font-size: 1.125rem;
+  .services .description .service-section .info p {
+    font-size: 1.25rem;
   }
-  .services .description .service-section .on-shrink img {
+  .services .description .service-section img {
+    width: 50%;
+    max-height: 20vw;
+  }
+}
+@media screen and (max-width: 725px) {
+  .services .description .service-section {
+    height: 10rem;
+  }
+  .services .description .service-section .info {
+    width: 100%;
+  }
+  .services .description .service-section .info h3 {
+    font-size: 1.5rem;
+  }
+  .services .description .service-section .info p {
+    font-size: 1.25rem;
+  }
+  .services .description .service-section img {
     display: none;
   }
 }
@@ -652,13 +630,12 @@ footer .image-credits {
   align-items: flex-end;
 }
 .home .photo .img {
-  height: 50rem;
+  height: 75vh;
   margin-left: auto;
   width: 75vw;
   overflow: hidden;
 }
 .home .photo .img img {
-  height: 50rem;
   width: 75vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -666,30 +643,31 @@ footer .image-credits {
 .home .landing-text {
   grid-row: 1/2;
   grid-column: 1/2;
-  padding: 4rem 2rem;
+  padding: 15% 7.5%;
   padding-bottom: 0;
   color: #17292E;
 }
 .home .landing-text .main h1 {
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .home .landing-text .main h1 .underline {
+  margin: 1% 0;
   display: none;
 }
 .home .landing-text .main p {
   display: none;
   font-size: 2rem;
-  width: 35rem;
+  width: 65%;
   font-family: sans-serif;
+  padding: 1% 2.5%;
 }
 .home .landing-text button {
   display: none;
-  margin: 15rem 7.5rem;
-  margin-bottom: 0;
+  margin: 5%;
   width: 30%;
-  height: 3.5rem;
+  height: 7.5%;
   font-size: 2rem;
   font-family: sans-serif;
   font-weight: bold;
@@ -704,14 +682,14 @@ footer .image-credits {
   justify-content: flex-end;
 }
 .home .hire-me .rectangle {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
   z-index: 1;
   width: 100%;
-  height: 7.5rem;
+  height: 15%;
   background-color: #b2402e;
   display: flex;
   font-family: sans-serif;
@@ -727,7 +705,7 @@ footer .image-credits {
 }
 .home .hire-me .rectangle button {
   width: 70%;
-  height: 3.5rem;
+  height: 50%;
   font-size: 2rem;
   font-weight: bold;
   color: #17292E;
@@ -735,15 +713,13 @@ footer .image-credits {
 }
 
 @media screen and (min-width: 765px) {
-  .home {
-    height: calc(100vh + 7.5rem);
-  }
   .home .landing-text {
-    padding: 10rem 7.5rem;
+    padding: 7.5% 5%;
+    padding-bottom: 0;
     color: #17292E;
   }
   .home .landing-text .main h1 {
-    width: 40rem;
+    width: 65%;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 3.5rem;
@@ -751,13 +727,12 @@ footer .image-credits {
   .home .landing-text .main h1 .underline {
     display: block;
     height: 0.5rem;
-    width: 80%;
+    width: 50%;
     background-color: #ABA8A7;
   }
   .home .landing-text .main p {
     font-weight: bold;
     display: block;
-    padding: 0 1rem;
   }
   .home .landing-text button {
     display: block;
@@ -779,10 +754,13 @@ footer .image-credits {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .home .hire-me .rectangle {
+    height: 0;
+  }
   .home .hire-me .rectangle .triangle-up {
-    border-bottom: 10rem solid #b2402e;
+    border-bottom: 5rem solid #b2402e;
     border-right: 150vw solid transparent;
-    top: -9.9rem;
+    top: -4.9rem;
   }
   .home .hire-me .rectangle button {
     display: none;
