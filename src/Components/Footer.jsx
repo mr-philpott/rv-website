@@ -3,6 +3,8 @@ import svg from "../assets/images/Steren_Gear.svg"
 const Footer = () => {
   return (
     <footer>
+        <div id="foot-triangle"></div>
+
         <img src={svg} alt="gear" />
 
         <ul className="copyright">

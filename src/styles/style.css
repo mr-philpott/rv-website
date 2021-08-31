@@ -578,27 +578,46 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 }
 .photos h3 {
   text-align: center;
-  background: #b2402e;
-  color: #eee;
+  background: #F1EADA;
+  color: #b2402e;
   font-size: 3rem;
   padding: 1rem;
 }
 .photos .gallery-grid {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  grid-gap: 0.5rem;
+  padding-bottom: 1.5rem;
+  background: #F1EADA;
+}
+.photos .gallery-grid .row {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 0.5rem;
 }
 
 footer {
   font-family: sans-serif;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
   padding: 1rem;
   width: 100%;
-  background-color: #b2402e;
-  color: #eee;
+  background-color: #F1EADA;
+  color: #b2402e;
+}
+footer #foot-triangle {
+  width: 0;
+  height: 0;
+  border-left: 120vw solid transparent;
+  border-bottom: 4rem solid #F1EADA;
+  background: #C64733;
+  position: absolute;
+  top: -4rem;
+  right: 1rem;
 }
 footer h2 {
   margin: 10px 0 0;
@@ -769,4 +788,46 @@ footer .image-credits {
     display: none;
     background-color: #F1EADA;
   }
+}
+.listContacts {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #F1EADA;
+  display: relative;
+}
+.listContacts #contact-triangle {
+  width: 0;
+  height: 0;
+  border-right: 120vw solid transparent;
+  border-bottom: 3rem solid #C64733;
+  background: #F1EADA;
+  position: absolute;
+}
+.listContacts h3 {
+  width: 100%;
+  text-align: center;
+  background: #C64733;
+  font-size: 3rem;
+  padding-top: 4rem;
+}
+.listContacts .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #C64733;
+}
+.listContacts .contacts p {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+.listContacts .contacts li {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0.25rem;
+}
+.listContacts .contacts #needTop {
+  margin-top: 2rem;
+}
+.listContacts .contacts #needBottom {
+  margin-bottom: 6.5rem;
 }/*# sourceMappingURL=style.css.map */

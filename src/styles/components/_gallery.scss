@@ -8,14 +8,25 @@
     background: $background;
     h3{
         text-align: center;
-        background: $primary-dark;
-        color: #eee;
-        font-size: 3rem;padding: 1rem;
+        background: $background;
+        color: $primary-dark;
+        font-size: 3rem;
+        padding: 1rem;
     }
 
     .gallery-grid{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        grid-gap: .5rem;
+        padding-bottom: 1.5rem;
+        background: $background;
+
+        .row{
+            display: flex;
+            flex-direction: row;
+            grid-gap: .5rem;
+        }
         // display: grid;
         // //🌵 grid stuff 🌵
         // grid-template-columns: auto auto;
