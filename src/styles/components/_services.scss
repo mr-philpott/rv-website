@@ -4,6 +4,8 @@
 .services {
     background-color: $primary-dark;
     font-family: sans-serif;
+    position: relative;
+    z-index: 3;
 
     h2 {
         font-size: 3rem;
