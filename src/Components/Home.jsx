@@ -24,7 +24,6 @@ const Home = () => {
             </div>
             <div className="hire-me">
                 <div className="rectangle">
-                    <div className="triangle-up"></div>
                     <button>
                         Hire Me!
                     </button>
