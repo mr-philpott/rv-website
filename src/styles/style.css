@@ -555,6 +555,17 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 .photos {
   font-family: sans-serif;
   background: #F1EADA;
+  position: relative;
+  margin-top: 4rem;
+}
+.photos #foot-triangle {
+  width: 0;
+  height: 0;
+  border-left: 120vw solid transparent;
+  border-bottom: 5rem solid #F1EADA;
+  background: #b2402e;
+  position: absolute;
+  top: -4rem;
 }
 .photos h3 {
   text-align: center;
@@ -567,18 +578,62 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   grid-gap: 0.5rem;
   padding-bottom: 1.5rem;
+  max-width: 95%;
+  margin-left: 1rem;
+  margin-right: 1rem;
   background: #F1EADA;
 }
-.photos .gallery-grid .row {
+.photos .gallery-grid .cols {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  justify-content: center;
+  align-items: center;
   grid-gap: 0.5rem;
+  width: 90%;
+}
+.photos .gallery-grid .cols .row1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 0.5rem;
+  max-width: 50%;
+}
+.photos .gallery-grid .cols .row2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 0.5rem;
+  max-width: 50%;
+}
+.photos .gallery-grid .row3 {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+.photos .gallery-grid .row3 #img-long {
+  min-width: 100%;
 }
 
+@media screen and (min-width: 1285px) {
+  .photos .gallery-grid {
+    grid-gap: 1rem;
+  }
+  .photos .gallery-grid .cols {
+    grid-gap: 1rem;
+  }
+  .photos .gallery-grid .cols .row1 {
+    grid-gap: 1rem;
+  }
+  .photos .gallery-grid .cols .row2 {
+    grid-gap: 1rem;
+  }
+  .photos .gallery-grid .row3 {
+    width: 69.5%;
+  }
+}
 footer {
   font-family: sans-serif;
   flex-direction: column;
@@ -595,11 +650,11 @@ footer #foot-triangle {
   width: 0;
   height: 0;
   border-left: 120vw solid transparent;
-  border-bottom: 4rem solid #F1EADA;
+  border-bottom: 5rem solid #F1EADA;
   background: #C64733;
   position: absolute;
-  top: -4rem;
-  right: 1rem;
+  top: -3.5rem;
+  right: -1rem;
 }
 footer h2 {
   margin: 10px 0 0;
@@ -795,18 +850,24 @@ footer .image-credits {
 .listContacts .contacts {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-items: center;
+  text-align: center;
   background: #C64733;
 }
 .listContacts .contacts p {
   margin-top: 1.5rem;
   font-size: 1.25rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
 }
 .listContacts .contacts li {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0.25rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .listContacts .contacts #needTop {
   margin-top: 2rem;
