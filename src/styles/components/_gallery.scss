@@ -6,61 +6,95 @@
 .photos{
     font-family: sans-serif;
     background: $background;
+    position: relative;
+    margin-top: 4rem;
+
+    #foot-triangle{
+        width: 0;
+        height: 0;
+        //border-left: 60px solid transparent;
+        border-left: 120vw solid transparent;
+        border-bottom: 5rem solid $background;
+        background: $primary-dark;
+        position: absolute;
+        top: -4rem;
+        //right: -1rem;
+    }
+
     h3{
         text-align: center;
         background: $background;
         color: $primary-dark;
         font-size: 3rem;
         padding: 1rem;
+        //margin-top: 10rem;
     }
 
     .gallery-grid{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        justify-items: center;
+        align-items: center;
         grid-gap: .5rem;
         padding-bottom: 1.5rem;
+        max-width: 95%;
+        margin-left: 1rem;
+        margin-right: 1rem;
 
         background: $background;
 
-        .row{
+        .cols{
             display: flex;
             flex-direction: row;
-            width: 80%;
-            //flex: 25%;
-            grid-gap: .5rem;
-        }
-        // display: grid;
-        // //🌵 grid stuff 🌵
-        // grid-template-columns: auto auto;
-        // grid-template-rows: auto auto;
-        // #img-big1square{
-        //     grid-area: big1
-        // }
-        // #img-big2square{
-        //     grid-area: big2
-        // }
-        // #img-square1{
-        //     grid-area: one
-        // }
-        // #img-square2{
-        //     grid-area: two
-        // }
-        // #img-long{
-        //     grid-area: long
-        // }
-        // grid-template-areas: 
-        // "big1 big1 one"
-        // "long long long"
-        // "two big2 big2";
+            justify-content: center;
+            align-items: center;
 
-        // justify-items: center;
-        // place-items: center stretch;
-        // grid-gap: .5%;
-        // margin: 1%;
-        // margin-left: 10%;
-        // margin-right: 10%;
+            grid-gap: .5rem;
+            width: 90%;
+            .row1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-gap: .5rem;
+                max-width: 50%;
+            }
+            .row2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-gap: .5rem;
+                max-width: 50%;
+            }
+        }
+        .row3{
+            display: flex;
+            align-items: center;
+            width: 90%;
+            #img-long{
+                min-width: 100%;
+            }
+        }
     }
-    
+}
+
+@media screen and (min-width: 1285px){
+.photos{
+    .gallery-grid{
+        grid-gap: 1rem;
+
+        .cols{
+            grid-gap: 1rem;
+
+            .row1{
+                grid-gap: 1rem;
+            }
+            .row2{
+                grid-gap: 1rem;
+            }
+        }
+        .row3{
+            width: 69.5%;
+        }
+    }
+}
 }
