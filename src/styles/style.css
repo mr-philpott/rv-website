@@ -576,6 +576,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   background: #b2402e;
   position: absolute;
   top: -4rem;
+  right: 0;
 }
 .photos h3 {
   text-align: center;
@@ -636,9 +637,9 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   }
   .photos .gallery-grid .cols .row1 {
     grid-gap: 1rem;
-    /*#big1square{
-        height: 800px;
-    }*/
+  }
+  .photos .gallery-grid .cols .row1 #big1square {
+    height: 800px;
   }
   .photos .gallery-grid .cols .row2 {
     grid-gap: 1rem;
@@ -655,19 +656,19 @@ footer {
   text-align: center;
   position: relative;
   padding: 1rem;
-  width: 100%;
+  width: 99vw;
   background-color: #F1EADA;
   color: #b2402e;
 }
 footer #foot-triangle {
   width: 0;
   height: 0;
-  border-left: 120vw solid transparent;
-  border-bottom: 5rem solid #F1EADA;
+  border-left: 140vw solid transparent;
+  border-bottom: 4rem solid #F1EADA;
   background: #C64733;
   position: absolute;
   top: -3.5rem;
-  right: -1rem;
+  right: 0;
 }
 footer h2 {
   margin: 10px 0 0;
@@ -844,18 +845,20 @@ footer .image-credits {
 .listContacts {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #F1EADA;
+  width: 95vw;
   display: relative;
 }
 .listContacts #contact-triangle {
   width: 0;
   height: 0;
-  border-right: 120vw solid transparent;
+  border-right: 140vw solid transparent;
   border-bottom: 3rem solid #C64733;
   background: #F1EADA;
   position: absolute;
+  right: 0rem;
 }
 .listContacts h3 {
-  width: 100%;
+  width: 98.9vw;
   text-align: center;
   background: #C64733;
   font-size: 3rem;
@@ -867,6 +870,7 @@ footer .image-credits {
   align-items: center;
   justify-items: center;
   text-align: center;
+  width: 98.9vw;
   background: #C64733;
 }
 .listContacts .contacts p {

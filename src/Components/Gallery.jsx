@@ -19,7 +19,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 <div className="row3">
-                        <img src="https://picsum.photos/650/500" alt="example" id="img-long"/>
+                        <img src="https://picsum.photos/500/400" alt="example" id="img-long"/>
                     </div>
             </div>
         </section>
