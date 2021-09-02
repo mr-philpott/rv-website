@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { useScroll } from '../contexts/ScrollContext'
 
 const minZoom = 1;
-const maxZoom = 1.5;
+const maxZoom = 1.25;
 let valZoom = minZoom;
-const scrollStart = 175;
-const scrollEnd = 600;
+const scrollStart = 250;
+const scrollEnd = 850;
 
 const Services = () => {
     const scroll = useScroll();

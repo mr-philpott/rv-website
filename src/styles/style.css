@@ -537,8 +537,10 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   .services .description .service-section .info p {
     font-size: 1.25rem;
   }
-  .services .description .service-section img {
+  .services .description .service-section .img-container {
     width: 50%;
+  }
+  .services .description .service-section .img-container img {
     max-height: 20vw;
   }
 }
@@ -555,9 +557,11 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   .services .description .service-section .info p {
     font-size: 1.25rem;
   }
-  .services .description .service-section img {
-    margin: 0 auto;
+  .services .description .service-section .img-container {
     width: 100%;
+  }
+  .services .description .service-section .img-container img {
+    margin: 0 auto;
     max-height: 50vw;
   }
 }
