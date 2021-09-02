@@ -16,12 +16,12 @@ footer{
     #foot-triangle{
         width: 0;
         height: 0;
-        border-left: 140vw solid transparent;
+        border-left: 100vw solid transparent;
         border-bottom: 4rem solid $background;
         background: $primary;
         position: absolute;
-        top: -3.5rem;
-        right: 0;
+        top: -2.5rem;
+        left: 0;
     }
 
     h2{

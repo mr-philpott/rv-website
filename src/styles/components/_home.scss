@@ -16,9 +16,9 @@
         align-items: flex-end;
         
         .img {
-            height: 75vh;
             margin-left: auto;
             width: 75vw;
+            height: 85vh;
             overflow: hidden;
 
             img {
@@ -59,12 +59,18 @@
             display: none;
             margin: 5%;
             width: 30%;
-            height: 7.5%;
             font-size: 2rem;
+            border-radius: .5rem;
+            padding: 1% 0 ;
             font-family: sans-serif;
             font-weight: bold;
             color: $black;
             background-color: $background;
+            transition: background-color .25s;
+
+            &:hover {
+                background-color: $primary;
+            }
         }
     }
     

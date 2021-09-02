@@ -9,11 +9,9 @@
     #contact-triangle{
         width: 0;
         height: 0;
-        border-right: 140vw solid transparent;
+        border-right: 100vw solid transparent;
         border-bottom: 3rem solid $primary;
         background: $background;
-        position: absolute;
-        right: 0rem;
     }
     h3{
         text-align: center;
