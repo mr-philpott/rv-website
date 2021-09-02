@@ -5,7 +5,6 @@
 .listContacts{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: $background;
-    width: 95vw;
     display: relative;
     #contact-triangle{
         width: 0;
@@ -17,7 +16,6 @@
         right: 0rem;
     }
     h3{
-        width: 98.9vw;
         text-align: center;
         background: $primary;
         font-size: 3rem;
@@ -29,7 +27,6 @@
         align-items: center;
         justify-items: center;
         text-align: center;
-        width: 98.9vw;
 
         background: $primary;
 
@@ -41,12 +38,11 @@
             text-align: center;
         }
         li{
-            //display: flex;
             font-size: 1.5rem;
             font-weight: bold;
             margin: .25rem;
-            margin-left: 10%;
-            margin-right: 10%;
+            margin-left: 5%;
+            margin-right: 5%;
         }
         #needTop{
             margin-top: 2rem;
