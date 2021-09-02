@@ -631,6 +631,9 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 .photos .gallery-mobile .row3 #img-long {
   min-width: 100%;
 }
+.photos .gallery-desk {
+  display: none;
+}
 
 @media screen and (min-width: 1050px) {
   .photos {
@@ -659,7 +662,19 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
     display: none;
   }
   .photos .gallery-desk {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 0.5rem;
+  }
+  .photos .gallery-desk .row0 {
+    display: flex;
+    grid-gap: 0.5rem;
+  }
+  .photos .gallery-desk .row2 {
+    display: flex;
+    grid-gap: 0.5rem;
   }
 }
 footer {

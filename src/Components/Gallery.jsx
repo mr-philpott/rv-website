@@ -25,15 +25,15 @@ const Gallery = () => {
 
             <div className="gallery-desk">
                 <div className="row0">
-                    <img src="https://picsum.photos/400/450" alt="example" id="img-big1square"/>
-                    <img src="https://picsum.photos/600/450" alt="example" id="img-square1"/>
+                    <img src="https://picsum.photos/500/450" alt="example" id="img-big1square"/>
+                    <img src="https://picsum.photos/700/450" alt="example" id="img-square1"/>
                 </div>
                 <div className="row1">
-                    <img src="https://picsum.photos/1000/400" alt="example" id="img-long"/>
+                    <img src="https://picsum.photos/1205/500" alt="example" id="img-long"/>
                 </div>
                 <div className="row2">
-                    <img src="https://picsum.photos/400/450" alt="example" id="img-big1square"/>
-                    <img src="https://picsum.photos/600/450" alt="example" id="img-square1"/>
+                    <img src="https://picsum.photos/500/450" alt="example" id="img-big1square"/>
+                    <img src="https://picsum.photos/700/450" alt="example" id="img-square1"/>
                 </div>
             </div>
         </section>

@@ -66,7 +66,6 @@
                 flex-direction: column;
                 align-items: center;
                 grid-gap: .5rem;
-               //width: 90%;
             }
         }
         .row3{
@@ -78,6 +77,9 @@
             }
         }
     }
+    .gallery-desk{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1050px){
@@ -86,7 +88,19 @@
         display: none;
     }
     .gallery-desk{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: .5rem;
+        .row0{
+            display: flex;
+            grid-gap: .5rem;
+        }
+        .row2{
+            display: flex;
+            grid-gap: .5rem;
+        }
     }
         /*grid-gap: 1rem;
 
