@@ -490,6 +490,9 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   display: flex;
   gap: 2rem;
 }
+.services .description .service-section .info {
+  width: 65%;
+}
 .services .description .service-section .info h3 {
   font-size: 2rem;
   font-weight: 600;
@@ -498,8 +501,13 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 .services .description .service-section .info p {
   font-size: 1.5rem;
 }
-.services .description .service-section img {
+.services .description .service-section .img-container {
+  overflow: hidden;
   width: 35%;
+}
+.services .description .service-section .img-container img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
