@@ -628,6 +628,9 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   }
   .photos .gallery-grid .cols .row1 {
     grid-gap: 1rem;
+    /*#big1square{
+        height: 800px;
+    }*/
   }
   .photos .gallery-grid .cols .row2 {
     grid-gap: 1rem;
