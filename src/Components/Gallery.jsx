@@ -7,44 +7,13 @@ const Gallery = () => {
             
             <h3>Gallery</h3>
 
-            <div className="gallery-mobile">
-                <div className="row3">
-                        <img src="https://picsum.photos/500/300" alt="example" id="img-long"/>
-                </div>
-                <div className="cols">
-                    <div className="row1">
-                        <img src="https://picsum.photos/600/800" alt="example" id="img-big1square"/>
-                        <img src="https://picsum.photos/600/650" alt="example" id="img-square1"/>
-                    </div>
-                    <div className="row2">
-                        <img src="https://picsum.photos/600/650" alt="example" id="img-square2"/>
-                        <img src="https://picsum.photos/600/800" alt="example" id="img-big2square"/>
-                    </div>
-                </div>
-                <div className="row3">
-                        <img src="https://picsum.photos/500/300" alt="example" id="img-long"/>
-                </div>
-            </div>
-
-            <div className="gallery-desk">
-                <div className="pics2">
-                    <img src="https://picsum.photos/450/300" alt="example" id="img-big1square"/>
-                    <img src="https://picsum.photos/650/300" alt="example" id="img-square1"/>
-                </div>
-                <div className="pic1">
-                    <img src="https://picsum.photos/1105/350" alt="example" id="img-long"/>
-                </div>
-                <div className="pics2">
-                    <img src="https://picsum.photos/650/300" alt="example" id="img-square1"/>
-                    <img src="https://picsum.photos/450/300" alt="example" id="img-big1square"/>
-                </div>
-                <div className="pic1">
-                    <img src="https://picsum.photos/1105/350" alt="example" id="img-long"/>
-                </div>
-                <div className="pics2">
-                    <img src="https://picsum.photos/450/300" alt="example" id="img-big1square"/>
-                    <img src="https://picsum.photos/650/300" alt="example" id="img-square1"/>
-                </div>
+            <div className="gallery">
+                <img src="https://picsum.photos/200/301" alt="example" />
+                <img src="https://picsum.photos/200/302" alt="example" />
+                <img src="https://picsum.photos/200/303" alt="example" />
+                <img src="https://picsum.photos/200/304" alt="example" />
+                <img src="https://picsum.photos/200/305" alt="example" />
+                <img src="https://picsum.photos/200/306" alt="example" />
             </div>
         </section>
     )
