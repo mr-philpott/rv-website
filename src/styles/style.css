@@ -283,6 +283,10 @@ a:visited {
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -783,13 +787,9 @@ footer .image-credits {
   margin: 5%;
   width: 30%;
   font-size: 2rem;
-<<<<<<< HEAD
   font-family: "Overpass", sans-serif;
-=======
   border-radius: 0.5rem;
   padding: 1% 0;
-  font-family: sans-serif;
->>>>>>> 710eac8b7d662b65de5f5c93c2e6ec4e4a5fb173
   font-weight: bold;
   color: #17292E;
   background-color: #F1EADA;
