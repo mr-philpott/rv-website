@@ -283,6 +283,10 @@ a:visited {
   color: inherit;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .app {
   background-size: cover;
   background-blend-mode: darken;
@@ -494,6 +498,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   padding: 2.5%;
   display: flex;
   gap: 2rem;
+  border-radius: 0.5rem;
 }
 .services .description .service-section .info {
   width: 65%;
@@ -698,12 +703,12 @@ footer {
 footer #foot-triangle {
   width: 0;
   height: 0;
-  border-left: 140vw solid transparent;
+  border-left: 100vw solid transparent;
   border-bottom: 4rem solid #F1EADA;
   background: #C64733;
   position: absolute;
-  top: -3.5rem;
-  right: 0;
+  top: -2.5rem;
+  left: 0;
 }
 footer h2 {
   margin: 10px 0 0;
@@ -741,9 +746,9 @@ footer .image-credits {
   align-items: flex-end;
 }
 .home .photo .img {
-  height: 75vh;
   margin-left: auto;
   width: 75vw;
+  height: 85vh;
   overflow: hidden;
 }
 .home .photo .img img {
@@ -777,12 +782,21 @@ footer .image-credits {
   display: none;
   margin: 5%;
   width: 30%;
-  height: 7.5%;
   font-size: 2rem;
+<<<<<<< HEAD
   font-family: "Overpass", sans-serif;
+=======
+  border-radius: 0.5rem;
+  padding: 1% 0;
+  font-family: sans-serif;
+>>>>>>> 710eac8b7d662b65de5f5c93c2e6ec4e4a5fb173
   font-weight: bold;
   color: #17292E;
   background-color: #F1EADA;
+  transition: background-color 0.25s;
+}
+.home .landing-text button:hover {
+  background-color: #C64733;
 }
 .home .hire-me {
   grid-row: 1/2;
@@ -886,11 +900,9 @@ footer .image-credits {
 .listContacts #contact-triangle {
   width: 0;
   height: 0;
-  border-right: 140vw solid transparent;
+  border-right: 100vw solid transparent;
   border-bottom: 3rem solid #C64733;
   background: #F1EADA;
-  position: absolute;
-  right: 0rem;
 }
 .listContacts h3 {
   text-align: center;
