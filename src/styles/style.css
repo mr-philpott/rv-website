@@ -282,6 +282,10 @@ a:visited {
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
