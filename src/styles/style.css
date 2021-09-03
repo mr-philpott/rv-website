@@ -326,7 +326,7 @@ nav .nav-branding {
 nav .nav-branding .logo {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #cf5744;
+  background-color: #d46958;
   border-radius: 50%;
 }
 nav .nav-branding .company-name {
@@ -342,6 +342,7 @@ nav .links {
 }
 nav .nav-toggle {
   display: none;
+  margin: 0 2rem;
 }
 nav .nav-toggle .hamburger {
   display: flex;
@@ -413,16 +414,28 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Overpass", sans-serif;
+  padding: 3%;
+  border-radius: 0.5rem;
+}
+.nav-dropdown .links li a:hover {
+  background-color: #ede4cf;
+  transition: 0.5s;
 }
 .nav-dropdown .links li a .icon {
-  font-size: 1rem;
+  font-size: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 3rem;
   height: 3rem;
-  background-color: #ABA8A7;
+  background-color: #d46958;
+  border-radius: 0.5rem;
+}
+.nav-dropdown .links li a .icon:hover {
+  background-color: #C64733;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 1055px) {
@@ -479,7 +492,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   }
 }
 .services {
-  background-color: #b2402e;
+  background-color: #C64733;
   font-family: "Overpass", sans-serif;
   position: relative;
   z-index: 3;
@@ -591,7 +604,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   height: 0;
   border-left: 120vw solid transparent;
   border-bottom: 5rem solid #F1EADA;
-  background: #b2402e;
+  background: #C64733;
   position: absolute;
   top: -4rem;
   right: 0;
@@ -624,7 +637,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   width: 90%;
 }
 .photos .gallery-mobile .cols img {
-  box-shadow: #eae0c8 5px 5px 5px;
+  box-shadow: #ede4cf 5px 5px 5px;
 }
 .photos .gallery-mobile .cols .row1 {
   display: flex;
@@ -814,13 +827,13 @@ footer .image-credits {
   z-index: 1;
   width: 100%;
   height: 15%;
-  background-color: #b2402e;
+  background-color: #C64733;
   display: flex;
-  font-family: sans-serif;
+  font-family: "Overpass", sans-serif;
 }
 .home .hire-me .rectangle::after {
   content: "";
-  border-bottom: 2.5rem solid #b2402e;
+  border-bottom: 2.5rem solid #C64733;
   border-right: 100vw solid transparent;
   position: absolute;
   top: -2.5rem;
@@ -832,6 +845,7 @@ footer .image-credits {
   font-weight: bold;
   color: #17292E;
   background-color: #F1EADA;
+  border-radius: 0.5rem;
 }
 
 @media screen and (min-width: 765px) {
@@ -882,7 +896,7 @@ footer .image-credits {
   }
   .home .hire-me .rectangle::after {
     content: "";
-    border-bottom: 5rem solid #b2402e;
+    border-bottom: 5rem solid #C64733;
     border-right: 100vw solid transparent;
     position: absolute;
     top: -5rem;
@@ -908,7 +922,7 @@ footer .image-credits {
   text-align: center;
   background: #C64733;
   font-size: 3rem;
-  padding-top: 4rem;
+  padding-top: 5.5rem;
   font-family: "Alfa Slab One", cursive;
 }
 .listContacts .contacts {
@@ -937,5 +951,5 @@ footer .image-credits {
   margin-top: 2rem;
 }
 .listContacts .contacts #needBottom {
-  margin-bottom: 6.5rem;
+  margin-bottom: 7rem;
 }/*# sourceMappingURL=style.css.map */
