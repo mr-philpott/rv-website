@@ -8,6 +8,9 @@ const Gallery = () => {
             <h3>Gallery</h3>
 
             <div className="gallery-mobile">
+                <div className="row3">
+                        <img src="https://picsum.photos/500/300" alt="example" id="img-long"/>
+                </div>
                 <div className="cols">
                     <div className="row1">
                         <img src="https://picsum.photos/600/800" alt="example" id="img-big1square"/>
@@ -20,20 +23,27 @@ const Gallery = () => {
                 </div>
                 <div className="row3">
                         <img src="https://picsum.photos/500/300" alt="example" id="img-long"/>
-                    </div>
+                </div>
             </div>
 
             <div className="gallery-desk">
-                <div className="row0">
-                    <img src="https://picsum.photos/500/450" alt="example" id="img-big1square"/>
-                    <img src="https://picsum.photos/700/450" alt="example" id="img-square1"/>
+                <div className="pics2">
+                    <img src="https://picsum.photos/450/300" alt="example" id="img-big1square"/>
+                    <img src="https://picsum.photos/650/300" alt="example" id="img-square1"/>
                 </div>
-                <div className="row1">
-                    <img src="https://picsum.photos/1205/500" alt="example" id="img-long"/>
+                <div className="pic1">
+                    <img src="https://picsum.photos/1105/350" alt="example" id="img-long"/>
                 </div>
-                <div className="row2">
-                    <img src="https://picsum.photos/500/450" alt="example" id="img-big1square"/>
-                    <img src="https://picsum.photos/700/450" alt="example" id="img-square1"/>
+                <div className="pics2">
+                    <img src="https://picsum.photos/650/300" alt="example" id="img-square1"/>
+                    <img src="https://picsum.photos/450/300" alt="example" id="img-big1square"/>
+                </div>
+                <div className="pic1">
+                    <img src="https://picsum.photos/1105/350" alt="example" id="img-long"/>
+                </div>
+                <div className="pics2">
+                    <img src="https://picsum.photos/450/300" alt="example" id="img-big1square"/>
+                    <img src="https://picsum.photos/650/300" alt="example" id="img-square1"/>
                 </div>
             </div>
         </section>

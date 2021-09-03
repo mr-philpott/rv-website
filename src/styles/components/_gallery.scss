@@ -4,7 +4,7 @@
 
 
 .photos{
-    font-family: sans-serif;
+    font-family: 'Alfa Slab One', cursive;
     background: $background;
     position: relative;
     margin-top: 4rem;
@@ -93,11 +93,11 @@
         justify-content: center;
         align-items: center;
         grid-gap: .5rem;
-        .row0{
+        .pic1{
             display: flex;
             grid-gap: .5rem;
         }
-        .row2{
+        .pics2{
             display: flex;
             grid-gap: .5rem;
         }

@@ -3,7 +3,7 @@
 
 .services {
     background-color: $primary-dark;
-    font-family: sans-serif;
+    font-family: 'Overpass', sans-serif;
     position: relative;
     z-index: 3;
 
@@ -11,6 +11,7 @@
         font-size: 3rem;
         color: #eee;
         text-align: center;
+        font-family: 'Alfa Slab One', cursive;
     }
 
     .description {
