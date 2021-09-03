@@ -37,8 +37,8 @@
 
         .main {
             h1 {
-                font-family: sans-serif;
-                font-weight: bold;
+                font-family: 'Alfa Slab One', cursive;
+                //font-weight: bold;
                 font-size: 3rem;
                 .underline {
                     margin: 1% 0;
@@ -50,7 +50,7 @@
                 display: none;
                 font-size: 2rem;
                 width: 50%;
-                font-family: sans-serif;
+                font-family: 'Overpass', sans-serif;
                 padding: 1%  2.5%;
             }
         }
@@ -60,9 +60,9 @@
             margin: 5%;
             width: 30%;
             font-size: 2rem;
+            font-family: 'Overpass', sans-serif;
             border-radius: .5rem;
             padding: 1% 0 ;
-            font-family: sans-serif;
             font-weight: bold;
             color: $black;
             background-color: $background;
@@ -121,8 +121,8 @@
             .main {
                 h1 {
                     width: 50%;
-                    font-family: sans-serif;
-                    font-weight: bold;
+                    font-family: 'Alfa Slab One', cursive;
+                    //font-weight: bold;
                     font-size: 3.5rem;
     
                     .underline {

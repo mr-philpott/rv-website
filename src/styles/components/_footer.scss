@@ -2,7 +2,7 @@
 @use "../utils" as *;
 
 footer{ 
-    font-family: sans-serif;
+    font-family: 'Overpass', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,7 @@ footer{
     position: relative;
 
     padding: 1rem;
+    padding-bottom: 1.5rem;
     background-color: $background;
     color: $primary-dark;
     
@@ -30,10 +31,13 @@ footer{
     }
     ul{
         margin: 5px 0 5px;
+        li{
+            padding-bottom: .25rem;
+        }
     }
     img{
         width: 55px;
-        margin: 10px 0 5px;
+        margin: 10px 0 17px;
     }
 
     .image-credits{

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fjalla+One&family=Overpass:wght@300&family=Signika:wght@300&display=swap");
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -311,7 +312,7 @@ nav {
   align-items: center;
   background-color: #b2402e;
   font-size: 1.5rem;
-  font-family: sans-serif;
+  font-family: "Overpass", sans-serif;
   color: #eee;
   z-index: 99;
 }
@@ -327,6 +328,9 @@ nav .nav-branding .logo {
   height: 2.5rem;
   background-color: #cf5744;
   border-radius: 50%;
+}
+nav .nav-branding .company-name {
+  font-family: "Alfa Slab One", cursive;
 }
 nav .links {
   display: flex;
@@ -396,7 +400,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 }
 .nav-dropdown .links {
   font-size: 3rem;
-  font-family: sans-serif;
+  font-family: "Overpass", sans-serif;
   color: #17292E;
   width: 100%;
   height: 100%;
@@ -476,7 +480,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
 }
 .services {
   background-color: #b2402e;
-  font-family: sans-serif;
+  font-family: "Overpass", sans-serif;
   position: relative;
   z-index: 3;
 }
@@ -484,6 +488,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   font-size: 3rem;
   color: #eee;
   text-align: center;
+  font-family: "Alfa Slab One", cursive;
 }
 .services .description {
   color: #17292E;
@@ -576,7 +581,7 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   }
 }
 .photos {
-  font-family: sans-serif;
+  font-family: "Alfa Slab One", cursive;
   background: #F1EADA;
   position: relative;
   margin-top: 4rem;
@@ -678,23 +683,24 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
     align-items: center;
     grid-gap: 0.5rem;
   }
-  .photos .gallery-desk .row0 {
+  .photos .gallery-desk .pic1 {
     display: flex;
     grid-gap: 0.5rem;
   }
-  .photos .gallery-desk .row2 {
+  .photos .gallery-desk .pics2 {
     display: flex;
     grid-gap: 0.5rem;
   }
 }
 footer {
-  font-family: sans-serif;
+  font-family: "Overpass", sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
   padding: 1rem;
+  padding-bottom: 1.5rem;
   background-color: #F1EADA;
   color: #b2402e;
 }
@@ -715,9 +721,12 @@ footer h2 {
 footer ul {
   margin: 5px 0 5px;
 }
+footer ul li {
+  padding-bottom: 0.25rem;
+}
 footer img {
   width: 55px;
-  margin: 10px 0 5px;
+  margin: 10px 0 17px;
 }
 footer .image-credits {
   display: grid;
@@ -759,8 +768,7 @@ footer .image-credits {
   color: #17292E;
 }
 .home .landing-text .main h1 {
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: "Alfa Slab One", cursive;
   font-size: 3rem;
 }
 .home .landing-text .main h1 .underline {
@@ -771,7 +779,7 @@ footer .image-credits {
   display: none;
   font-size: 2rem;
   width: 50%;
-  font-family: sans-serif;
+  font-family: "Overpass", sans-serif;
   padding: 1% 2.5%;
 }
 .home .landing-text button {
@@ -779,9 +787,9 @@ footer .image-credits {
   margin: 5%;
   width: 30%;
   font-size: 2rem;
+  font-family: "Overpass", sans-serif;
   border-radius: 0.5rem;
   padding: 1% 0;
-  font-family: sans-serif;
   font-weight: bold;
   color: #17292E;
   background-color: #F1EADA;
@@ -834,8 +842,7 @@ footer .image-credits {
   }
   .home .landing-text .main h1 {
     width: 50%;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-family: "Alfa Slab One", cursive;
     font-size: 3.5rem;
   }
   .home .landing-text .main h1 .underline {
@@ -886,7 +893,7 @@ footer .image-credits {
   }
 }
 .listContacts {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Overpass", sans-serif;
   color: #F1EADA;
   display: relative;
 }
@@ -902,6 +909,7 @@ footer .image-credits {
   background: #C64733;
   font-size: 3rem;
   padding-top: 4rem;
+  font-family: "Alfa Slab One", cursive;
 }
 .listContacts .contacts {
   display: flex;

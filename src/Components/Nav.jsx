@@ -9,7 +9,7 @@ const Nav = () => {
                 <div className="nav-branding">
                     <div className="logo">
                     </div>
-                    <div className="company-name">RV / AC Service</div>
+                    <div className="company-name">Briggs AC Repair</div>
                 </div>
                 <ul className="links">
                     <li>
