@@ -55,7 +55,27 @@
     }
 }
 
-// @media screen and (max-width: )
+@media screen and (max-width: 994px) {
+    .photos {
+        padding: 1rem;
+        padding-bottom: 5rem;
+
+        .gallery{
+            height: 50vh;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, calc((50vh - 33%) / 3)) 33%;
+            grid-template-areas: 
+                "a b"
+                "a c"
+                "d c"
+                "e e";
+            
+            img:nth-of-type(6) {
+                display: none;
+            }
+        }
+    }
+}
 
 
 

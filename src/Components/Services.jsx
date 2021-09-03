@@ -21,7 +21,7 @@ const Services = () => {
 
     return (
         <>
-            <section className="services">
+            <section className="services" id="services">
                 <h2>Services</h2>
                 <div className="description">
                     <div className="service-section inspection">

@@ -29,6 +29,7 @@
     }
 
     .landing-text {
+        width: 100vw;
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         padding: 15% 7.5%;
@@ -38,7 +39,6 @@
         .main {
             h1 {
                 font-family: 'Alfa Slab One', cursive;
-                //font-weight: bold;
                 font-size: 3rem;
                 .underline {
                     margin: 1% 0;
@@ -60,14 +60,13 @@
             margin: 5%;
             width: 30%;
             font-size: 2rem;
-            font-family: 'Overpass', sans-serif;
             border-radius: .5rem;
             padding: 1% 0 ;
-            font-weight: bold;
             color: $black;
             background-color: $background;
             transition: background-color .25s;
-
+            font-family: 'Overpass', sans-serif;
+            font-weight: bold;
             &:hover {
                 background-color: $primary;
             }
@@ -75,6 +74,7 @@
     }
     
     .hire-me {
+        width: 100vw;
         grid-row: 1 / 2;
         grid-column: 1 / 2;
         display: flex;
@@ -85,11 +85,10 @@
             @include Flex-Center;
             position: relative;
             z-index: 1;
-            width: 100%;
+            width: 100vw;
             height: 15%;
             background-color: $primary;
             display: flex;
-            font-family: 'Overpass', sans-serif;
 
             &::after {
                 content: "";
@@ -97,16 +96,18 @@
                 border-right: 100vw solid transparent;
                 position: absolute;
                 top: -2.5rem;
+                left: 0;
             }
 
             button {
                 width: 70%;
                 height: 50%;
                 font-size: 2rem;
-                font-weight: bold;
                 color: $black;
                 background-color: $background;
                 border-radius: .5rem;
+                font-weight: bold;
+                font-family: 'Overpass', sans-serif;
             }
         }
     }

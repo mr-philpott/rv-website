@@ -11,9 +11,10 @@ const Nav = () => {
         <>
             <nav>
                 <div className="nav-branding">
-                    <div className="logo">
-                    </div>
-                    <div className="company-name">Briggs AC Repair</div>
+                    <a href="#">
+                        <div className="logo"></div>
+                        <div className="company-name">Briggs AC Repair</div>
+                    </a>
                 </div>
                 <ul className="links">
                     <li>
@@ -27,12 +28,7 @@ const Nav = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#review">
-                            Review
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#gallery">
+                        <a href="#contact">
                             Contact
                         </a>
                     </li>
@@ -60,14 +56,6 @@ const Nav = () => {
                             Gallery
                             <div className="icon">
                                 <BiPhotoAlbum/>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#review">
-                            Review
-                            <div className="icon">
-                                <VscOpenPreview />
                             </div>
                         </a>
                     </li>

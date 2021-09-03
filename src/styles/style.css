@@ -316,20 +316,20 @@ nav {
   color: #eee;
   z-index: 99;
 }
-nav .nav-branding {
+nav .nav-branding a {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-nav .nav-branding .logo {
+nav .nav-branding a .logo {
   width: 2.5rem;
   height: 2.5rem;
   background-color: #d46958;
   border-radius: 50%;
 }
-nav .nav-branding .company-name {
+nav .nav-branding a .company-name {
   font-family: "Alfa Slab One", cursive;
 }
 nav .links {
@@ -651,6 +651,21 @@ nav .nav-toggle .cross .slice:nth-of-type(3) {
   grid-area: f;
 }
 
+@media screen and (max-width: 994px) {
+  .photos {
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+  .photos .gallery {
+    height: 50vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, calc((50vh - 33%) / 3)) 33%;
+    grid-template-areas: "a b" "a c" "d c" "e e";
+  }
+  .photos .gallery img:nth-of-type(6) {
+    display: none;
+  }
+}
 footer {
   font-family: "Overpass", sans-serif;
   flex-direction: column;
@@ -720,6 +735,7 @@ footer .image-credits {
      object-fit: cover;
 }
 .home .landing-text {
+  width: 100vw;
   grid-row: 1/2;
   grid-column: 1/2;
   padding: 15% 7.5%;
@@ -746,18 +762,19 @@ footer .image-credits {
   margin: 5%;
   width: 30%;
   font-size: 2rem;
-  font-family: "Overpass", sans-serif;
   border-radius: 0.5rem;
   padding: 1% 0;
-  font-weight: bold;
   color: #17292E;
   background-color: #F1EADA;
   transition: background-color 0.25s;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold;
 }
 .home .landing-text button:hover {
   background-color: #C64733;
 }
 .home .hire-me {
+  width: 100vw;
   grid-row: 1/2;
   grid-column: 1/2;
   display: flex;
@@ -771,11 +788,10 @@ footer .image-credits {
   align-items: center;
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   height: 15%;
   background-color: #C64733;
   display: flex;
-  font-family: "Overpass", sans-serif;
 }
 .home .hire-me .rectangle::after {
   content: "";
@@ -783,15 +799,17 @@ footer .image-credits {
   border-right: 100vw solid transparent;
   position: absolute;
   top: -2.5rem;
+  left: 0;
 }
 .home .hire-me .rectangle button {
   width: 70%;
   height: 50%;
   font-size: 2rem;
-  font-weight: bold;
   color: #17292E;
   background-color: #F1EADA;
   border-radius: 0.5rem;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
 }
 
 @media screen and (min-width: 765px) {

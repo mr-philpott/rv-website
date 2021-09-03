@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = () => {
     return (
-        <section className="photos">
+        <section className="photos" id="gallery">
             <div id="foot-triangle"></div>
             
             <h3>Gallery</h3>

@@ -17,17 +17,19 @@ nav {
     z-index: 99;
 
     .nav-branding {
-        @include Flex-Center;
-        gap: 2rem;
-
-        .logo {
-            width:  2.5rem;
-            height: 2.5rem;
-            background-color: $primary-light;
-            border-radius: 50%;
-        }
-        .company-name{
-            font-family: 'Alfa Slab One', cursive;
+        a {
+            @include Flex-Center;
+            gap: 2rem;
+    
+            .logo {
+                width:  2.5rem;
+                height: 2.5rem;
+                background-color: $primary-light;
+                border-radius: 50%;
+            }
+            .company-name{
+                font-family: 'Alfa Slab One', cursive;
+            }
         }
     }
 

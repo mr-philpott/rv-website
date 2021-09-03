@@ -2,7 +2,7 @@ import svg from "../assets/images/Steren_Gear.svg"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer >
         <div id="foot-triangle"></div>
 
         <img src={svg} alt="gear" />

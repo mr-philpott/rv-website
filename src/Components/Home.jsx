@@ -21,15 +21,19 @@ const Home = () => {
                         Welcome! I am a RV inspectionist and Air Conditioning Repair man.
                     </p>
                 </div>
-                <button>
-                    Hire Me!
-                </button>
-            </div>
-            <div className="hire-me">
-                <div className="rectangle">
+                <a href="#contact">
                     <button>
                         Hire Me!
                     </button>
+                </a>
+            </div>
+            <div className="hire-me">
+                <div className="rectangle">
+                    <a href="#contact">
+                        <button>
+                            Hire Me!
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
