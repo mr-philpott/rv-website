@@ -1,4 +1,8 @@
 import { useState } from "react"
+import { BiPhotoAlbum } from "react-icons/bi"
+import { BiWrench } from "react-icons/bi"
+import { VscOpenPreview } from "react-icons/vsc"
+import { AiOutlinePhone } from "react-icons/ai"
 
 const Nav = () => {
     const [dropdown, setDropdown] = useState(false);
@@ -47,7 +51,7 @@ const Nav = () => {
                         <a href="#services">
                             Services
                             <div className="icon">
-                                icon
+                            <BiWrench />
                             </div>
                         </a>
                     </li>
@@ -55,7 +59,7 @@ const Nav = () => {
                         <a href="#gallery">
                             Gallery
                             <div className="icon">
-                                icon
+                                <BiPhotoAlbum/>
                             </div>
                         </a>
                     </li>
@@ -63,15 +67,15 @@ const Nav = () => {
                         <a href="#review">
                             Review
                             <div className="icon">
-                                icon
+                                <VscOpenPreview />
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#gallery">
+                        <a href="#contact">
                             Contact
                             <div className="icon">
-                                icon
+                                <AiOutlinePhone />
                             </div>
                         </a>
                     </li>

@@ -39,6 +39,7 @@ nav {
     
     .nav-toggle {
         display: none;
+        margin: 0 2rem;
         
         .hamburger {
             display: flex;
@@ -118,13 +119,25 @@ nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            font-family: 'Overpass', sans-serif;
+            padding: 3%;
+            border-radius: .5rem;
+            &:hover{
+                background-color: $background-dark;
+                transition: .5s;
+            }
             
             .icon {
-                font-size: 1rem;
+                font-size: 2rem;
                 @include Flex-Center;
                 width: 3rem;
                 height: 3rem;
-                background-color: $grey;
+                background-color: $primary-light;
+                border-radius: .5rem;
+                &:hover{
+                    background-color: $primary;
+                    transition: .5s;
+                }
             }
         }
     }
