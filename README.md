@@ -14,3 +14,12 @@
 
 - Ethan:
 - Alisson: finished contacts and footer. added almost all triangles. trying best with gallery
+
+## Day 4
+- Ethan:
+- Alisson: continued to try to fix bugs
+
+## Day 5
+
+- Ethan:
+- Alisson: fixed small details like font and icons
